@@ -1,0 +1,8 @@
+{
+  "name": "Zaly Design",
+  "description": "Studio haut de gamme de décoration et design d'intérieur, aménagement d'espace et conseil en optimisation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
