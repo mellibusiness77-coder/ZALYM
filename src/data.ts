@@ -35,7 +35,7 @@ export const translations: { FR: TranslationSet; EN: TranslationSet } = {
       sectionTitle: "Mon Histoire",
       quote: "Je crois que chaque espace a une âme à révéler.",
       paragraph1: "Designer d'intérieur passionnée, je travaille avec des clients exigeants à travers le monde pour créer des environnements qui allient beauté, fonctionnalité et authenticité.",
-      paragraph2: "Chaque projet est une conversation — entre l'espace, la lumière, et les gens qui l'habitent. Chez ZALY DESIGN, nous ne décorons pas simplement : nous épurons, nous optimisons les volumes, et nous structurons la lumière pour révéler l'élégance immanente de chaque demeure.",
+      paragraph2: "Chaque projet est une conversation — entre l'espace, la lumière, et les gens qui l'habitent. Chez ZALY M DESIGN, nous ne décorons pas simplement : nous épurons, nous optimisons les volumes, et nous structurons la lumière pour révéler l'élégance immanente de chaque demeure.",
       statExperience: "10 Ans d'Excellence",
       statCountries: "5 Pays Majeurs",
       statClarity: "Luxe Pur & Discret"
@@ -240,7 +240,7 @@ export const translations: { FR: TranslationSet; EN: TranslationSet } = {
       presenceTitle: "ADRESSES & PROJETS",
       hoursTitle: "CONSEILS SUR RDV",
       hoursVal: "Lundi au Samedi : 09:00 — 19:30",
-      rights: "ZALY DESIGN. Tous droits réservés. L'excellence du luxe discret."
+      rights: "ZALY M DESIGN. Tous droits réservés. L'excellence du luxe discret."
     }
   },
   EN: {
@@ -261,7 +261,7 @@ export const translations: { FR: TranslationSet; EN: TranslationSet } = {
       sectionTitle: "My Story",
       quote: "I believe every room has a story waiting to unfold.",
       paragraph1: "A passionate interior designer working globally with discerning patrons to structure environments that fuse elevated beauty, quiet utility, and rare soul.",
-      paragraph2: "Every single commission is an ongoing discourse — between lines, pristine lights, and individuals residing there. At ZALY DESIGN, we believe true luxury does not shout; we refine proportions, filter illumination, and custom-tailor bespoke millwork to reveal the inherent grandeur of your estate.",
+      paragraph2: "Every single commission is an ongoing discourse — between lines, pristine lights, and individuals residing there. At ZALY M DESIGN, we believe true luxury does not shout; we refine proportions, filter illumination, and custom-tailor bespoke millwork to reveal the inherent grandeur of your estate.",
       statExperience: "10 Years of Excellence",
       statCountries: "5 Key Locations",
       statClarity: "Pure, Understated Luxury"
@@ -466,7 +466,7 @@ export const translations: { FR: TranslationSet; EN: TranslationSet } = {
       presenceTitle: "GLOBAL OFFICES & PROJECTS",
       hoursTitle: "INQUIRIES BY APPOINTMENT",
       hoursVal: "Monday to Saturday: 09:00 AM — 07:30 PM CET",
-      rights: "ZALY DESIGN. All rights reserved. Silent Luxury and Absolute Form."
+      rights: "ZALY M DESIGN. All rights reserved. Silent Luxury and Absolute Form."
     }
   }
 };

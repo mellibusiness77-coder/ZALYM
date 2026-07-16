@@ -114,7 +114,7 @@ export default function App() {
       t.contact.serviceOptions.audit;
 
     // Formatting elegant WhatsApp transmission text
-    const messageTemplate = `*ZALY DESIGN — Nouvelle demande de projet d'intérieur*
+    const messageTemplate = `*ZALY M DESIGN — Nouvelle demande de projet d'intérieur*
 ---------------------------------------
 *Nom complet* : ${contactForm.fullName}
 *Téléphone* : ${contactForm.phone}
@@ -166,7 +166,7 @@ ${contactForm.message || "Aucun message supplémentaire."}`;
             className="group flex flex-col items-start cursor-pointer focus:outline-none"
           >
             <span className="font-serif font-semibold text-2xl tracking-[0.25em] text-brand-charcoal transition-all duration-300 group-hover:text-brand-bronze">
-              ZALY DESIGN
+              ZALY M DESIGN
             </span>
             <span className="text-[9px] tracking-[0.3em] uppercase text-brand-taupe font-mono mt-1">
               INTERIOR ARCHITECTURE
@@ -330,7 +330,7 @@ ${contactForm.message || "Aucun message supplémentaire."}`;
 
             <div id="mobile-menu-footer" className="flex flex-col space-y-4 pt-6 border-t border-brand-taupe/20">
               <div className="flex items-center justify-between text-xs text-brand-taupe">
-                <span>ZALY DESIGN Studio</span>
+                <span>ZALY M DESIGN Studio</span>
                 <span className="font-mono">Paris • Dubai</span>
               </div>
               <div className="flex space-x-6 text-brand-charcoal">
@@ -369,7 +369,7 @@ ${contactForm.message || "Aucun message supplémentaire."}`;
                 <div className="absolute inset-0 z-0 bg-brand-cream text-[#2D2A26]">
                   <img 
                     src={IMAGES.heroBright}
-                    alt="Bespoke luxury modern living room by ZALY DESIGN" 
+                    alt="Bespoke luxury modern living room by ZALY M DESIGN" 
                     className="w-full h-full object-cover opacity-90 scale-105 animate-[subtle-zoom_20s_ease_infinite]"
                     style={{ filter: 'brightness(0.98) contrast(1.02)' }}
                     referrerPolicy="no-referrer"
@@ -390,7 +390,7 @@ ${contactForm.message || "Aucun message supplémentaire."}`;
                   >
                     <span className="w-12 h-[1px] bg-brand-bronze" />
                     <span className="text-[11px] tracking-[0.4em] uppercase font-mono text-brand-bronze font-semibold">
-                      ZALY DESIGN
+                      ZALY M DESIGN
                     </span>
                     <span className="w-12 h-[1px] bg-brand-bronze" />
                   </motion.div>
@@ -1034,7 +1034,7 @@ ${contactForm.message || "Aucun message supplémentaire."}`;
                   <span>{t.projects.backBtn}</span>
                 </button>
                 <span className="text-[10px] uppercase font-mono tracking-[0.2em] text-brand-taupe font-semibold">
-                  ZALY DESIGN PORTFOLIO • {activeProject.country}
+                  ZALY M DESIGN PORTFOLIO • {activeProject.country}
                 </span>
               </div>
 
@@ -1179,7 +1179,7 @@ ${contactForm.message || "Aucun message supplémentaire."}`;
             {/* Logo and Tagline Col */}
             <div className="md:col-span-5 text-left">
               <span className="font-serif font-semibold text-3xl tracking-[0.25em] text-brand-charcoal">
-                ZALY DESIGN
+                ZALY M DESIGN
               </span>
               <p className="text-xs tracking-[0.3em] font-mono text-brand-bronze uppercase mt-1">
                 STUDIO D'INTERIEUR HAUT DE GAMME
@@ -1193,7 +1193,7 @@ ${contactForm.message || "Aucun message supplémentaire."}`;
               <div className="flex space-x-4 mt-8">
                 <a 
                   href="https://instagram.com" 
-                  aria-label="Instagram Zaly Design" 
+                  aria-label="Instagram Zaly M Design" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="p-2 border border-brand-charcoal/20 hover:border-brand-bronze rounded-full text-brand-charcoal/80 hover:text-brand-bronze transition-colors animate-pulse-slow"
@@ -1202,7 +1202,7 @@ ${contactForm.message || "Aucun message supplémentaire."}`;
                 </a>
                 <a 
                   href="https://linkedin.com" 
-                  aria-label="LinkedIn Zaly Design" 
+                  aria-label="LinkedIn Zaly M Design" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="p-2 border border-brand-charcoal/20 hover:border-brand-bronze rounded-full text-brand-charcoal/80 hover:text-brand-bronze transition-colors"
@@ -1211,7 +1211,7 @@ ${contactForm.message || "Aucun message supplémentaire."}`;
                 </a>
                 <a 
                   href="https://wa.me/33660986173" 
-                  aria-label="WhatsApp Zaly Design" 
+                  aria-label="WhatsApp Zaly M Design" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="p-2 border border-brand-charcoal/20 hover:border-brand-bronze rounded-full text-brand-charcoal/80 hover:text-brand-bronze transition-colors"
