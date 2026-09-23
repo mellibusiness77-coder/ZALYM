@@ -87,18 +87,31 @@ export default function App() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  // Helper to scroll to section smoothly on home page
+  // Helper to scroll to section smoothly on home page with header offset
   const scrollToSection = (id: string) => {
-    if (currentPath !== '/') {
-      // First go home, then wait a frame and scroll
-      navigateTo('/');
-      setTimeout(() => {
-        const el = document.getElementById(id);
-        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }, 100);
-    } else {
+    const performScroll = () => {
+      if (id === 'hero') {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        return;
+      }
       const el = document.getElementById(id);
-      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      if (el) {
+        const headerOffset = 80;
+        const elementPosition = el.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
+    };
+
+    if (currentPath !== '/') {
+      // First go home, then wait for page render and scroll
+      navigateTo('/');
+      setTimeout(performScroll, 120);
+    } else {
+      performScroll();
     }
     setMobileMenuOpen(false);
   };
@@ -114,7 +127,7 @@ export default function App() {
       t.contact.serviceOptions.audit;
 
     // Formatting elegant WhatsApp transmission text
-    const messageTemplate = `*ZALY M DESIGN — Nouvelle demande de projet d'intérieur*
+    const messageTemplate = `*ZALY M — Nouvelle demande de projet d'intérieur*
 ---------------------------------------
 *Nom complet* : ${contactForm.fullName}
 *Téléphone* : ${contactForm.phone}
@@ -156,123 +169,118 @@ ${contactForm.message || "Aucun message supplémentaire."}`;
     <div id="zaly-app" className="min-h-screen flex flex-col selection:bg-brand-bronze selection:text-white bg-brand-cream text-brand-charcoal overflow-x-hidden antialiased font-sans">
       
       {/* HEADER / NAVIGATION BAR */}
-      <header id="main-header" className="sticky top-0 z-50 bg-brand-cream/80 backdrop-blur-md border-b border-brand-charcoal/5 px-6 py-4 md:px-12 transition-all duration-300">
-        <div id="header-container" className="max-w-7xl mx-auto flex items-center justify-between">
+      <header id="main-header" className="sticky top-0 z-50 bg-[#1F1612]/92 backdrop-blur-md border-b border-[#C5A880]/30 px-4 py-3 md:px-8 transition-all duration-300 shadow-md">
+        <div id="header-container" className="max-w-7xl mx-auto flex items-center justify-between gap-4">
           
           {/* Logo Brand */}
           <button 
             id="logo-brand"
             onClick={() => navigateTo('/')} 
-            className="group flex flex-col items-start cursor-pointer focus:outline-none"
+            className="group flex flex-col items-start cursor-pointer focus:outline-none shrink-0"
           >
-            <span className="font-serif font-semibold text-2xl tracking-[0.25em] text-brand-charcoal transition-all duration-300 group-hover:text-brand-bronze">
-              ZALY M DESIGN
+            <span className="font-serif font-semibold text-2xl tracking-[0.25em] text-[#FFF2D6] transition-all duration-300 group-hover:text-[#E8C585]">
+              ZALY M
             </span>
-            <span className="text-[9px] tracking-[0.3em] uppercase text-brand-taupe font-mono mt-1">
-              INTERIOR ARCHITECTURE
+            <span className="text-[9px] tracking-[0.3em] uppercase text-[#C5A880] font-mono mt-0.5">
+              ARCHITECTURE & DESIGN
             </span>
           </button>
 
-          {/* Desktop Navigation Link Menu */}
-          <nav id="desktop-nav" className="hidden md:flex items-center space-x-8">
+          {/* Desktop Navigation Link Menu - Styled in gold rectangle button blocks matching 'Découvrir mes projets' */}
+          <nav id="desktop-nav" className="hidden md:flex items-center space-x-1.5 lg:space-x-2">
             <button 
               id="nav-link-home"
-              onClick={() => navigateTo('/')} 
-              className={`text-xs tracking-widest uppercase font-medium transition-colors hover:text-brand-bronze cursor-pointer ${currentPath === '/' ? 'text-brand-bronze border-b border-brand-bronze/40 pb-1' : 'text-brand-charcoal/70'}`}
+              onClick={() => scrollToSection('hero')} 
+              className={`text-[10px] lg:text-[11px] font-semibold tracking-wider lg:tracking-widest uppercase px-2.5 lg:px-3.5 py-2 transition-all duration-300 rounded-sm cursor-pointer shadow-sm hover:shadow-md hover:scale-[1.02] ${
+                currentPath === '/' 
+                  ? 'bg-gradient-to-r from-[#CDB07B] via-[#E5CE9F] to-[#BFA57B] text-[#1A1A1A] ring-1 ring-[#FFF2D6]' 
+                  : 'bg-gradient-to-r from-[#CDB07B]/85 via-[#E5CE9F]/90 to-[#BFA57B]/85 text-[#1A1A1A] hover:from-[#CDB07B] hover:via-[#E5CE9F] hover:to-[#BFA57B]'
+              }`}
             >
               {t.nav.home}
             </button>
             <button 
               id="nav-link-history"
               onClick={() => scrollToSection('histoire')} 
-              className="text-xs tracking-widest uppercase font-medium text-brand-charcoal/70 transition-colors hover:text-brand-bronze cursor-pointer"
+              className="text-[10px] lg:text-[11px] font-semibold tracking-wider lg:tracking-widest uppercase px-2.5 lg:px-3.5 py-2 transition-all duration-300 rounded-sm cursor-pointer shadow-sm hover:shadow-md hover:scale-[1.02] bg-gradient-to-r from-[#CDB07B]/85 via-[#E5CE9F]/90 to-[#BFA57B]/85 text-[#1A1A1A] hover:from-[#CDB07B] hover:via-[#E5CE9F] hover:to-[#BFA57B]"
             >
               {t.nav.history}
             </button>
             <button 
               id="nav-link-services"
               onClick={() => scrollToSection('services')} 
-              className="text-xs tracking-widest uppercase font-medium text-brand-charcoal/70 transition-colors hover:text-brand-bronze cursor-pointer"
+              className="text-[10px] lg:text-[11px] font-semibold tracking-wider lg:tracking-widest uppercase px-2.5 lg:px-3.5 py-2 transition-all duration-300 rounded-sm cursor-pointer shadow-sm hover:shadow-md hover:scale-[1.02] bg-gradient-to-r from-[#CDB07B]/85 via-[#E5CE9F]/90 to-[#BFA57B]/85 text-[#1A1A1A] hover:from-[#CDB07B] hover:via-[#E5CE9F] hover:to-[#BFA57B]"
             >
               {t.nav.services}
             </button>
             <button 
               id="nav-link-portfolio"
               onClick={() => scrollToSection('realisations')} 
-              className="text-xs tracking-widest uppercase font-medium text-brand-charcoal/70 transition-colors hover:text-brand-bronze cursor-pointer"
+              className="text-[10px] lg:text-[11px] font-semibold tracking-wider lg:tracking-widest uppercase px-2.5 lg:px-3.5 py-2 transition-all duration-300 rounded-sm cursor-pointer shadow-sm hover:shadow-md hover:scale-[1.02] bg-gradient-to-r from-[#CDB07B]/85 via-[#E5CE9F]/90 to-[#BFA57B]/85 text-[#1A1A1A] hover:from-[#CDB07B] hover:via-[#E5CE9F] hover:to-[#BFA57B]"
             >
               {t.nav.projects}
             </button>
             <button 
               id="nav-link-contact"
               onClick={() => scrollToSection('contact')} 
-              className="text-xs tracking-widest uppercase font-medium text-brand-charcoal/70 transition-colors hover:text-brand-bronze cursor-pointer"
+              className="text-[10px] lg:text-[11px] font-semibold tracking-wider lg:tracking-widest uppercase px-2.5 lg:px-3.5 py-2 transition-all duration-300 rounded-sm cursor-pointer shadow-sm hover:shadow-md hover:scale-[1.02] bg-gradient-to-r from-[#CDB07B]/85 via-[#E5CE9F]/90 to-[#BFA57B]/85 text-[#1A1A1A] hover:from-[#CDB07B] hover:via-[#E5CE9F] hover:to-[#BFA57B]"
             >
               {t.nav.contact}
             </button>
           </nav>
 
-          {/* Language Selector + CTA Buttons */}
-          <div id="language-cta-panel" className="hidden md:flex items-center space-x-6">
+          {/* Language Selector + CTA 'Me contacter' Button */}
+          <div id="language-cta-panel" className="flex items-center space-x-2 md:space-x-3 shrink-0">
             
-            {/* Lang Dropdown */}
-            <div id="lang-selector-group" className="flex items-center space-x-2 border border-brand-taupe/20 px-3 py-1.5 rounded-sm bg-brand-sand/40">
-              <Globe id="globe-icon" className="w-3.5 h-3.5 text-brand-taupe" />
+            {/* Lang Switcher - Always visible in the top bar */}
+            <div id="lang-selector-group" className="flex items-center space-x-1 border border-[#E5CE9F]/50 px-2 py-1 rounded-sm bg-[#150F0C]/80 shadow-sm backdrop-blur-sm">
+              <Globe id="globe-icon" className="w-3.5 h-3.5 text-[#E5CE9F] mr-1 hidden sm:inline-block" />
               <button 
                 id="btn-lang-fr"
                 onClick={() => toggleLanguage('FR')} 
-                className={`text-[11px] font-medium tracking-wider transition-all px-1.5 py-0.5 rounded ${lang === 'FR' ? 'bg-brand-charcoal text-brand-cream' : 'text-brand-charcoal/60 hover:text-brand-charcoal'}`}
+                className={`text-[11px] font-semibold tracking-wider transition-all px-2 py-1 rounded-xs cursor-pointer ${
+                  lang === 'FR' 
+                    ? 'bg-gradient-to-r from-[#CDB07B] via-[#E5CE9F] to-[#BFA57B] text-[#1A1A1A] font-bold shadow-xs' 
+                    : 'text-[#F5F2ED]/70 hover:text-white'
+                }`}
+                title="Passer en Français"
               >
                 FR
               </button>
+              <span className="text-[#E5CE9F]/40 text-xs select-none">|</span>
               <button 
                 id="btn-lang-en"
                 onClick={() => toggleLanguage('EN')} 
-                className={`text-[11px] font-medium tracking-wider transition-all px-1.5 py-0.5 rounded ${lang === 'EN' ? 'bg-brand-charcoal text-brand-cream' : 'text-brand-charcoal/60 hover:text-brand-charcoal'}`}
+                className={`text-[11px] font-semibold tracking-wider transition-all px-2 py-1 rounded-xs cursor-pointer ${
+                  lang === 'EN' 
+                    ? 'bg-gradient-to-r from-[#CDB07B] via-[#E5CE9F] to-[#BFA57B] text-[#1A1A1A] font-bold shadow-xs' 
+                    : 'text-[#F5F2ED]/70 hover:text-white'
+                }`}
+                title="Switch to English"
               >
                 EN
               </button>
             </div>
 
-            {/* Elegant Contact Button */}
+            {/* Elegant Contact Button with the exact same gold rectangle format */}
             <button 
               id="btn-header-cta"
               onClick={() => scrollToSection('contact')}
-              className="bg-brand-charcoal text-brand-cream hover:bg-brand-bronze text-xs font-medium tracking-widest uppercase py-2.5 px-5 transition-all duration-300 rounded-sm hover:-translate-y-0.5 active:translate-y-0 text-center cursor-pointer"
+              className="hidden lg:inline-block bg-gradient-to-r from-[#CDB07B] via-[#E5CE9F] to-[#BFA57B] text-[#1A1A1A] text-xs font-semibold tracking-widest uppercase py-2 px-4 transition-all duration-300 rounded-sm hover:scale-[1.03] shadow-md hover:shadow-xl text-center cursor-pointer"
             >
               {t.hero.ctaContact}
             </button>
           </div>
 
-          {/* Mobile Actions Right Panel */}
-          <div id="mobile-navigation-trigger" className="flex items-center space-x-3 md:hidden">
-            {/* Mobile Lang Bubble */}
-            <div className="flex items-center space-x-1 border border-brand-taupe/15 px-2 py-1 rounded bg-brand-sand/30">
-              <button 
-                id="btn-mobile-lang-fr"
-                onClick={() => toggleLanguage('FR')} 
-                className={`text-[10px] font-bold px-1 ${lang === 'FR' ? 'text-brand-bronze' : 'text-brand-charcoal/50'}`}
-              >
-                FR
-              </button>
-              <span className="text-brand-taupe/30 text-xs">|</span>
-              <button 
-                id="btn-mobile-lang-en"
-                onClick={() => toggleLanguage('EN')} 
-                className={`text-[10px] font-bold px-1 ${lang === 'EN' ? 'text-brand-bronze' : 'text-brand-charcoal/50'}`}
-              >
-                EN
-              </button>
-            </div>
-
-            {/* Burger Icon */}
+          {/* Mobile Navigation Burger Trigger */}
+          <div id="mobile-navigation-trigger" className="flex items-center md:hidden">
             <button 
               id="btn-burger-menu"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)} 
-              className="text-brand-charcoal hover:text-brand-bronze p-1 transition-colors outline-none"
+              className="text-[#E5CE9F] hover:text-white p-1.5 transition-colors outline-none cursor-pointer border border-[#E5CE9F]/30 rounded-sm bg-[#150F0C]/80"
               aria-label="Toggle navigation menu"
             >
-              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </button>
           </div>
 
@@ -288,49 +296,49 @@ ${contactForm.message || "Aucun message supplémentaire."}`;
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 top-[73px] z-40 bg-brand-cream flex flex-col justify-between p-8 md:hidden border-t border-brand-taupe/10"
+            className="fixed inset-0 top-[73px] z-40 bg-[#1F1612]/98 flex flex-col justify-between p-8 md:hidden border-t border-[#C5A880]/20 backdrop-blur-md"
           >
-            <div id="mobile-nav-links" className="flex flex-col space-y-6 mt-6">
+            <div id="mobile-nav-links" className="flex flex-col space-y-3 mt-6">
               <button 
                 id="mob-link-home"
-                onClick={() => navigateTo('/')} 
-                className="text-left font-serif text-2xl tracking-wider py-2 border-b border-brand-taupe/10 text-brand-charcoal hover:text-brand-bronze"
+                onClick={() => scrollToSection('hero')} 
+                className="w-full text-center font-sans text-xs font-semibold uppercase tracking-widest py-3.5 px-6 rounded-sm shadow-md bg-gradient-to-r from-[#CDB07B] via-[#E5CE9F] to-[#BFA57B] text-[#1A1A1A] cursor-pointer"
               >
-                — {t.nav.home}
+                {t.nav.home}
               </button>
               <button 
                 id="mob-link-history"
                 onClick={() => scrollToSection('histoire')} 
-                className="text-left font-serif text-2xl tracking-wider py-2 border-b border-brand-taupe/10 text-brand-charcoal hover:text-brand-bronze"
+                className="w-full text-center font-sans text-xs font-semibold uppercase tracking-widest py-3.5 px-6 rounded-sm shadow-md bg-gradient-to-r from-[#CDB07B] via-[#E5CE9F] to-[#BFA57B] text-[#1A1A1A] cursor-pointer"
               >
-                — {t.nav.history}
+                {t.nav.history}
               </button>
               <button 
                 id="mob-link-services"
                 onClick={() => scrollToSection('services')} 
-                className="text-left font-serif text-2xl tracking-wider py-2 border-b border-brand-taupe/10 text-brand-charcoal hover:text-brand-bronze"
+                className="w-full text-center font-sans text-xs font-semibold uppercase tracking-widest py-3.5 px-6 rounded-sm shadow-md bg-gradient-to-r from-[#CDB07B] via-[#E5CE9F] to-[#BFA57B] text-[#1A1A1A] cursor-pointer"
               >
-                — {t.nav.services}
+                {t.nav.services}
               </button>
               <button 
                 id="mob-link-projects"
                 onClick={() => scrollToSection('realisations')} 
-                className="text-left font-serif text-2xl tracking-wider py-2 border-b border-brand-taupe/10 text-brand-charcoal hover:text-brand-bronze"
+                className="w-full text-center font-sans text-xs font-semibold uppercase tracking-widest py-3.5 px-6 rounded-sm shadow-md bg-gradient-to-r from-[#CDB07B] via-[#E5CE9F] to-[#BFA57B] text-[#1A1A1A] cursor-pointer"
               >
-                — {t.nav.projects}
+                {t.nav.projects}
               </button>
               <button 
                 id="mob-link-contact"
                 onClick={() => scrollToSection('contact')} 
-                className="text-left font-serif text-2xl tracking-wider py-2 border-b border-brand-taupe/10 text-brand-charcoal hover:text-brand-bronze"
+                className="w-full text-center font-sans text-xs font-semibold uppercase tracking-widest py-3.5 px-6 rounded-sm shadow-md bg-gradient-to-r from-[#CDB07B] via-[#E5CE9F] to-[#BFA57B] text-[#1A1A1A] cursor-pointer"
               >
-                — {t.nav.contact}
+                {t.nav.contact}
               </button>
             </div>
 
             <div id="mobile-menu-footer" className="flex flex-col space-y-4 pt-6 border-t border-brand-taupe/20">
               <div className="flex items-center justify-between text-xs text-brand-taupe">
-                <span>ZALY M DESIGN Studio</span>
+                <span>ZALY M Studio</span>
                 <span className="font-mono">Paris • Dubai</span>
               </div>
               <div className="flex space-x-6 text-brand-charcoal">
@@ -366,51 +374,39 @@ ${contactForm.message || "Aucun message supplémentaire."}`;
               {/* SECTION 1: HERO HOME HEADER */}
               <section id="hero" className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
                 {/* Immersive high resolution background picture */}
-                <div className="absolute inset-0 z-0 bg-brand-cream text-[#2D2A26]">
+                <div className="absolute inset-0 z-0 bg-[#2D2A26]">
                   <img 
                     src={IMAGES.heroBright}
-                    alt="Bespoke luxury modern living room by ZALY M DESIGN" 
-                    className="w-full h-full object-cover opacity-90 scale-105 animate-[subtle-zoom_20s_ease_infinite]"
-                    style={{ filter: 'brightness(0.98) contrast(1.02)' }}
+                    alt="Bespoke luxury modern living room by ZALY M" 
+                    className="w-full h-full object-cover scale-105 animate-[subtle-zoom_20s_ease_infinite]"
+                    style={{ filter: 'brightness(0.96) contrast(1.02)' }}
                     referrerPolicy="no-referrer"
                   />
                 </div>
 
-                {/* Aesthetic crisp modern filter glow */}
-                <div className="absolute inset-0 z-0 bg-gradient-to-t from-brand-cream/90 via-transparent to-brand-cream/45" />
+                {/* Crystal clear aesthetic gradient: soft dark top/bottom for readability while keeping the photo fully visible */}
+                <div className="absolute inset-0 z-0 bg-gradient-to-b from-black/50 via-transparent to-black/70" />
 
-                <div id="hero-caption" className="relative z-10 max-w-5xl mx-auto px-6 text-center text-brand-charcoal select-none">
-                  
-                  {/* Small decorative label */}
-                  <motion.div 
-                    initial={{ opacity: 0, y: 15 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.2, duration: 0.8 }}
-                    className="flex justify-center items-center space-x-3 mb-6"
-                  >
-                    <span className="w-12 h-[1px] bg-brand-bronze" />
-                    <span className="text-[11px] tracking-[0.4em] uppercase font-mono text-brand-bronze font-semibold">
-                      ZALY M DESIGN
-                    </span>
-                    <span className="w-12 h-[1px] bg-brand-bronze" />
-                  </motion.div>
+                <div id="hero-caption" className="relative z-10 max-w-5xl mx-auto px-6 text-center select-none pt-8">
 
-                  {/* Elegant Title */}
+                  {/* Elegant Golden Title */}
                   <motion.h1 
                     initial={{ opacity: 0, y: 25 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.4, duration: 0.9 }}
-                    className="font-serif text-4xl sm:text-5xl md:text-6.5xl leading-[1.1] font-light tracking-tight text-brand-charcoal mb-8"
+                    className="font-serif text-4xl sm:text-5xl md:text-6.5xl leading-[1.15] font-normal tracking-tight mb-8"
                   >
-                    {t.hero.title}
+                    <span className="bg-gradient-to-b from-[#FFF2D6] via-[#E8C585] to-[#BFA15F] bg-clip-text text-transparent drop-shadow-[0_4px_16px_rgba(0,0,0,0.7)]">
+                      {t.hero.title}
+                    </span>
                   </motion.h1>
 
-                  {/* Text representation */}
+                  {/* Text representation in soft luminous ivory */}
                   <motion.p 
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.6, duration: 0.8 }}
-                    className="text-sm md:text-lg text-brand-charcoal font-normal max-w-2xl mx-auto leading-relaxed mb-12 tracking-wide font-sans text-center"
+                    className="text-sm md:text-lg text-[#F5F2ED]/90 font-light max-w-2xl mx-auto leading-relaxed mb-12 tracking-wide font-sans text-center drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]"
                   >
                     {t.hero.subtitle}
                   </motion.p>
@@ -425,14 +421,14 @@ ${contactForm.message || "Aucun message supplémentaire."}`;
                     <button 
                        id="hero-cta-projects"
                        onClick={() => scrollToSection('realisations')}
-                       className="w-full sm:w-auto bg-brand-charcoal text-brand-cream hover:bg-brand-bronze hover:text-white text-xs font-semibold tracking-widest uppercase px-10 py-4.5 transition-all duration-300 rounded-sm cursor-pointer hover:shadow-xl"
+                       className="w-full sm:w-auto bg-gradient-to-r from-[#CDB07B] via-[#E5CE9F] to-[#BFA57B] text-[#1A1A1A] font-semibold text-xs tracking-widest uppercase px-10 py-4.5 transition-all duration-300 rounded-sm cursor-pointer shadow-lg hover:shadow-2xl hover:scale-[1.02]"
                     >
                       {t.hero.ctaProjects}
                     </button>
                     <button 
                       id="hero-cta-contact"
                       onClick={() => scrollToSection('contact')}
-                      className="w-full sm:w-auto bg-transparent border-2 border-brand-charcoal/40 text-brand-charcoal hover:border-brand-charcoal text-xs font-semibold tracking-widest uppercase px-10 py-4.5 transition-all duration-300 rounded-sm cursor-pointer backdrop-blur-xs"
+                      className="w-full sm:w-auto bg-black/30 border border-[#E5CE9F]/60 text-[#F5F2ED] hover:bg-[#E5CE9F]/15 hover:border-[#E5CE9F] text-xs font-semibold tracking-widest uppercase px-10 py-4.5 transition-all duration-300 rounded-sm cursor-pointer backdrop-blur-md"
                     >
                       {t.hero.ctaContact}
                     </button>
@@ -503,7 +499,7 @@ ${contactForm.message || "Aucun message supplémentaire."}`;
                     {/* Elite Stats Blocks */}
                     <div id="history-stats" className="grid grid-cols-3 gap-6 pt-8 border-t border-brand-charcoal/10">
                       <div className="flex flex-col">
-                        <span className="font-serif text-xl md:text-2xl text-brand-charcoal font-semibold">10+</span>
+                        <span className="font-serif text-xl md:text-2xl text-brand-charcoal font-semibold">3+</span>
                         <span className="text-[10px] uppercase font-mono tracking-wider text-brand-taupe mt-1">{t.history.statExperience}</span>
                       </div>
                       <div className="flex flex-col">
@@ -1034,7 +1030,7 @@ ${contactForm.message || "Aucun message supplémentaire."}`;
                   <span>{t.projects.backBtn}</span>
                 </button>
                 <span className="text-[10px] uppercase font-mono tracking-[0.2em] text-brand-taupe font-semibold">
-                  ZALY M DESIGN PORTFOLIO • {activeProject.country}
+                  ZALY M PORTFOLIO • {activeProject.country}
                 </span>
               </div>
 
@@ -1179,7 +1175,7 @@ ${contactForm.message || "Aucun message supplémentaire."}`;
             {/* Logo and Tagline Col */}
             <div className="md:col-span-5 text-left">
               <span className="font-serif font-semibold text-3xl tracking-[0.25em] text-brand-charcoal">
-                ZALY M DESIGN
+                ZALY M
               </span>
               <p className="text-xs tracking-[0.3em] font-mono text-brand-bronze uppercase mt-1">
                 STUDIO D'INTERIEUR HAUT DE GAMME
