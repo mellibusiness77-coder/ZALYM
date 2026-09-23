@@ -372,74 +372,79 @@ ${contactForm.message || "Aucun message supplémentaire."}`;
             >
               
               {/* SECTION 1: HERO HOME HEADER */}
-              <section id="hero" className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+              <section id="hero" className="relative min-h-[92vh] flex flex-col justify-between overflow-hidden pt-5 md:pt-7 pb-8 px-6">
                 {/* Immersive high resolution background picture */}
                 <div className="absolute inset-0 z-0 bg-[#2D2A26]">
                   <img 
                     src={IMAGES.heroBright}
                     alt="Bespoke luxury modern living room by ZALY M" 
-                    className="w-full h-full object-cover scale-105 animate-[subtle-zoom_20s_ease_infinite]"
+                    className="w-full h-full object-cover object-center scale-105 animate-[subtle-zoom_20s_ease_infinite]"
                     style={{ filter: 'brightness(0.96) contrast(1.02)' }}
                     referrerPolicy="no-referrer"
                   />
                 </div>
 
-                {/* Crystal clear aesthetic gradient: soft dark top/bottom for readability while keeping the photo fully visible */}
-                <div className="absolute inset-0 z-0 bg-gradient-to-b from-black/50 via-transparent to-black/70" />
+                {/* Subtle soft gradient at top and bottom to ensure text and buttons stand out crisply without obscuring the furniture in the middle */}
+                <div className="absolute inset-0 z-0 bg-gradient-to-b from-[#1F1612]/75 via-transparent to-[#1F1612]/70 pointer-events-none" />
 
-                <div id="hero-caption" className="relative z-10 max-w-5xl mx-auto px-6 text-center select-none pt-8">
-
+                {/* TOP BLOCK: Immediately below header */}
+                <div id="hero-caption" className="relative z-10 max-w-4xl mx-auto text-center select-none">
                   {/* Elegant Golden Title */}
                   <motion.h1 
-                    initial={{ opacity: 0, y: 25 }}
+                    initial={{ opacity: 0, y: 15 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.4, duration: 0.9 }}
-                    className="font-serif text-4xl sm:text-5xl md:text-6.5xl leading-[1.15] font-normal tracking-tight mb-8"
+                    transition={{ delay: 0.2, duration: 0.7 }}
+                    className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-[40px] leading-[1.25] font-normal tracking-tight mb-2 md:mb-3"
                   >
-                    <span className="bg-gradient-to-b from-[#FFF2D6] via-[#E8C585] to-[#BFA15F] bg-clip-text text-transparent drop-shadow-[0_4px_16px_rgba(0,0,0,0.7)]">
+                    <span className="bg-gradient-to-b from-[#FFF5E0] via-[#E8C585] to-[#BFA15F] bg-clip-text text-transparent drop-shadow-[0_2px_12px_rgba(0,0,0,0.85)]">
                       {t.hero.title}
                     </span>
                   </motion.h1>
 
-                  {/* Text representation in soft luminous ivory */}
+                  {/* Subtitle directly underneath */}
                   <motion.p 
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 12 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.6, duration: 0.8 }}
-                    className="text-sm md:text-lg text-[#F5F2ED]/90 font-light max-w-2xl mx-auto leading-relaxed mb-12 tracking-wide font-sans text-center drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]"
+                    transition={{ delay: 0.35, duration: 0.7 }}
+                    className="text-xs sm:text-sm md:text-base text-[#F5F2ED]/95 font-light max-w-xl mx-auto leading-relaxed tracking-wide font-sans text-center drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]"
                   >
                     {t.hero.subtitle}
                   </motion.p>
+                </div>
 
-                  {/* Interlinked layout elements */}
+                {/* MIDDLE SPACE IS PURPOSELY EMPTY TO DISPLAY THE COUCH & COFFEE TABLE CLEARLY */}
+                <div className="flex-1 min-h-[140px] pointer-events-none" />
+
+                {/* BOTTOM BLOCK: Action buttons positioned on the lower screen */}
+                <div id="hero-bottom-actions" className="relative z-10 max-w-4xl mx-auto w-full text-center flex flex-col items-center">
                   <motion.div 
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 15 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.8, duration: 0.8 }}
-                    className="flex flex-col sm:flex-row items-center justify-center gap-5"
+                    transition={{ delay: 0.5, duration: 0.7 }}
+                    className="flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-4 w-full sm:w-auto mb-4"
                   >
                     <button 
                        id="hero-cta-projects"
                        onClick={() => scrollToSection('realisations')}
-                       className="w-full sm:w-auto bg-gradient-to-r from-[#CDB07B] via-[#E5CE9F] to-[#BFA57B] text-[#1A1A1A] font-semibold text-xs tracking-widest uppercase px-10 py-4.5 transition-all duration-300 rounded-sm cursor-pointer shadow-lg hover:shadow-2xl hover:scale-[1.02]"
+                       className="w-full sm:w-auto bg-gradient-to-r from-[#CDB07B] via-[#E5CE9F] to-[#BFA57B] text-[#1A1A1A] font-semibold text-xs tracking-widest uppercase px-8 py-3.5 transition-all duration-300 rounded-sm cursor-pointer shadow-lg hover:shadow-2xl hover:scale-[1.02]"
                     >
                       {t.hero.ctaProjects}
                     </button>
                     <button 
                       id="hero-cta-contact"
                       onClick={() => scrollToSection('contact')}
-                      className="w-full sm:w-auto bg-black/30 border border-[#E5CE9F]/60 text-[#F5F2ED] hover:bg-[#E5CE9F]/15 hover:border-[#E5CE9F] text-xs font-semibold tracking-widest uppercase px-10 py-4.5 transition-all duration-300 rounded-sm cursor-pointer backdrop-blur-md"
+                      className="w-full sm:w-auto bg-[#1F1612]/75 border border-[#E5CE9F]/70 text-[#F5F2ED] hover:bg-[#E5CE9F]/20 hover:border-[#E5CE9F] text-xs font-semibold tracking-widest uppercase px-8 py-3.5 transition-all duration-300 rounded-sm cursor-pointer backdrop-blur-md shadow-md"
                     >
                       {t.hero.ctaContact}
                     </button>
                   </motion.div>
-                </div>
 
-                {/* High End Scroll indicator */}
-                <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center space-y-1.5 opacity-60">
-                  <span className="text-[10px] tracking-widest text-brand-charcoal/80 font-mono uppercase">SCROLL</span>
-                  <div className="w-[1.5px] h-10 bg-brand-charcoal/20 relative overflow-hidden rounded-full">
-                    <div className="absolute top-0 left-0 w-full h-1/2 bg-brand-bronze animate-scroll-line" />
+                  {/* High End Scroll indicator placed discreetly */}
+                  <div className="flex flex-col items-center space-y-1 opacity-70">
+                    <span className="text-[9px] tracking-widest text-[#E5CE9F] font-mono uppercase drop-shadow-[0_1px_4px_rgba(0,0,0,0.9)]">SCROLL</span>
+                    <div className="w-[1px] h-6 bg-[#E5CE9F]/40 relative overflow-hidden rounded-full">
+                      <div className="absolute top-0 left-0 w-full h-1/2 bg-[#E5CE9F] animate-scroll-line" />
+                    </div>
                   </div>
                 </div>
               </section>

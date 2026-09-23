@@ -20,34 +20,34 @@ export const translations: { FR: TranslationSet; EN: TranslationSet } = {
   FR: {
     nav: {
       home: "Accueil",
-      history: "Mon Histoire",
+      history: "Notre Histoire",
       services: "Services",
       projects: "Réalisations",
       contact: "Contact"
     },
     hero: {
       title: "Des intérieurs pensés pour votre vie.",
-      subtitle: "De Paris à Dubaï, je transforme chaque espace en une expérience unique, pensée pour vous et les gens qui y vivent.",
-      ctaProjects: "Découvrir mes projets",
-      ctaContact: "Me contacter"
+      subtitle: "De Paris à Dubaï, nous transformons chaque espace en une expérience unique, pensée pour vous et les personnes qui y vivent.",
+      ctaProjects: "Découvrir nos réalisations",
+      ctaContact: "Nous contacter"
     },
     history: {
-      sectionTitle: "Mon Histoire",
-      quote: "Je crois que chaque espace a une âme à révéler.",
-      paragraph1: "Designer d'intérieur passionnée, je travaille avec des clients exigeants à travers le monde pour créer des environnements qui allient beauté, fonctionnalité et authenticité.",
+      sectionTitle: "Notre Histoire",
+      quote: "Nous croyons que chaque espace a une âme à révéler.",
+      paragraph1: "Designers d'intérieur passionnés, nous travaillons avec des clients exigeants à travers le monde pour créer des environnements qui allient beauté, fonctionnalité et authenticité.",
       paragraph2: "Fondée à Paris, Zaly M imagine des intérieurs qui allient élégance, confort et sens du détail. Toujours en partant de la façon dont vous vivez.",
       statExperience: "3 Ans d'Excellence",
       statCountries: "5 Pays Majeurs",
       statClarity: "Luxe Pur & Discret"
     },
     services: {
-      sectionTitle: "Mes Services",
+      sectionTitle: "Nos Services",
       subtitle: "Un accompagnement haut de gamme sur-mesure pour tous vos projets d'aménagement",
       items: [
         {
           id: "design",
           title: "Conception & Design",
-          text: "Plans 3D, moodboards, choix des matériaux et palettes de couleurs — je vous donne à voir votre futur espace avant qu'il existe.",
+          text: "Plans 3D, moodboards, choix des matériaux et palettes de couleurs — nous vous donnons à voir votre futur espace avant qu'il n'existe.",
           image: IMAGES.serviceDesign,
           buttonText: "En savoir plus",
           moreDetails: [
@@ -60,7 +60,7 @@ export const translations: { FR: TranslationSet; EN: TranslationSet } = {
         {
           id: "coordination",
           title: "Coordination de projet",
-          text: "Je pilote artisans, fournisseurs et entrepreneurs pour que votre projet se déroule sans friction, de l'esquisse à la livraison.",
+          text: "Nous pilotons artisans, fournisseurs et entrepreneurs pour que votre projet se déroule sans friction, de l'esquisse à la livraison.",
           image: IMAGES.serviceCoordination,
           buttonText: "En savoir plus",
           moreDetails: [
@@ -86,7 +86,7 @@ export const translations: { FR: TranslationSet; EN: TranslationSet } = {
       ]
     },
     projects: {
-      sectionTitle: "Mes Réalisations",
+      sectionTitle: "Nos Réalisations",
       subtitle: "Un aperçu de nos projets d'aménagement d'espaces internationaux d'exception",
       moreInfoButton: "En savoir plus",
       backBtn: "Retour à l'accueil",
@@ -220,7 +220,7 @@ export const translations: { FR: TranslationSet; EN: TranslationSet } = {
     },
     contact: {
       title: "Parlons de votre projet",
-      subtitle: "Basée à Paris et intervenant à l'international, je réponds à vos amours de beaux volumes sous 48h.",
+      subtitle: "Basés à Paris et intervenant à l'international, nous répondons à vos projets de beaux volumes sous 48h.",
       fullName: "Nom complet",
       phone: "Numéro de téléphone",
       email: "Adresse e-mail",
@@ -231,7 +231,7 @@ export const translations: { FR: TranslationSet; EN: TranslationSet } = {
         audit: "Conseil & Audit"
       },
       messageLabel: "Votre Message",
-      placeholderMessage: "Parlez-moi de votre espace, de vos attentes et du calendrier envisagé...",
+      placeholderMessage: "Parlez-nous de votre espace, de vos attentes et du calendrier envisagé...",
       sendBtn: "Envoyer",
       whatsappNotice: "En cliquant sur envoyer, les informations de votre projet seront pré-remplies élégamment sur WhatsApp."
     },
@@ -246,21 +246,21 @@ export const translations: { FR: TranslationSet; EN: TranslationSet } = {
   EN: {
     nav: {
       home: "Home",
-      history: "My Story",
+      history: "Our Story",
       services: "Services",
       projects: "Portfolios",
       contact: "Contact"
     },
     hero: {
       title: "Designing spaces that reflect your soul",
-      subtitle: "From Paris to Dubai, I translate private visions into unique material structures, shaped for your ultimate lifestyle.",
-      ctaProjects: "Explore Portfolios",
-      ctaContact: "Get in touch"
+      subtitle: "From Paris to Dubai, we translate private visions into unique material structures, shaped for your ultimate lifestyle.",
+      ctaProjects: "Explore Our Portfolios",
+      ctaContact: "Contact Us"
     },
     history: {
-      sectionTitle: "My Story",
-      quote: "I believe every room has a story waiting to unfold.",
-      paragraph1: "A passionate interior designer working globally with discerning patrons to structure environments that fuse elevated beauty, quiet utility, and rare soul.",
+      sectionTitle: "Our Story",
+      quote: "We believe every room has a story waiting to unfold.",
+      paragraph1: "Passionate interior designers working globally with discerning patrons to structure environments that fuse elevated beauty, quiet utility, and rare soul.",
       paragraph2: "Founded in Paris, Zaly M imagines bespoke interiors blending elegance, comfort, and an obsessive attention to detail. Always starting from the way you live.",
       statExperience: "3 Years of Excellence",
       statCountries: "5 Key Locations",
@@ -446,7 +446,7 @@ export const translations: { FR: TranslationSet; EN: TranslationSet } = {
     },
     contact: {
       title: "Let's discuss your project",
-      subtitle: "Headquartered in Paris and serving private patrons globally. I respond with design visions within 48 hours.",
+      subtitle: "Headquartered in Paris and serving private patrons globally. We respond with design proposals within 48 hours.",
       fullName: "Full name",
       phone: "Phone number",
       email: "Email address",
@@ -457,7 +457,7 @@ export const translations: { FR: TranslationSet; EN: TranslationSet } = {
         audit: "Elite Workspace Design Audit"
       },
       messageLabel: "Your Inquiry",
-      placeholderMessage: "Tell me about your property, layout hopes, and target timeline...",
+      placeholderMessage: "Tell us about your property, layout hopes, and target timeline...",
       sendBtn: "Send",
       whatsappNotice: "Upon clicking, your inquiry details will be beautifully composed and prepared inside WhatsApp automatically."
     },
