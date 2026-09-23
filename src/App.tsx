@@ -438,14 +438,6 @@ ${contactForm.message || "Aucun message supplémentaire."}`;
                       {t.hero.ctaContact}
                     </button>
                   </motion.div>
-
-                  {/* High End Scroll indicator placed discreetly */}
-                  <div className="flex flex-col items-center space-y-1 opacity-70">
-                    <span className="text-[9px] tracking-widest text-[#E5CE9F] font-mono uppercase drop-shadow-[0_1px_4px_rgba(0,0,0,0.9)]">SCROLL</span>
-                    <div className="w-[1px] h-6 bg-[#E5CE9F]/40 relative overflow-hidden rounded-full">
-                      <div className="absolute top-0 left-0 w-full h-1/2 bg-[#E5CE9F] animate-scroll-line" />
-                    </div>
-                  </div>
                 </div>
               </section>
 

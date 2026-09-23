@@ -176,7 +176,7 @@ export const translations: { FR: TranslationSet; EN: TranslationSet } = {
           countryCode: "AE",
           title: "Villa d'Exception Oasis Céleste",
           location: "Palm Jumeirah • Dubaï",
-          bannerImage: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1600&q=85",
+          bannerImage: "https://image.noelshack.com/fichiers/2026/39/3/1790184932-villa-zaly.jpg",
           introduction: "Une villa côtière monumentale conçue pour créer l'harmonie parfaite entre la vue sur le golfe Persique et l'intimité du foyer. Les marbres nobles se déclinent en teintes désertiques dorées, rehaussés par un mobilier italien exclusif et des menuiseries sur mesure atteignant les plafonds.",
           gallery: [
             {
@@ -402,7 +402,7 @@ export const translations: { FR: TranslationSet; EN: TranslationSet } = {
           countryCode: "AE",
           title: "Celestial Palm Oasis Villa",
           location: "Palm Jumeirah • Dubai",
-          bannerImage: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1600&q=85",
+          bannerImage: "https://image.noelshack.com/fichiers/2026/39/3/1790184932-villa-zaly.jpg",
           introduction: "A majestic coastal mansion celebrating indoor-outdoor waterfront interactions. Crisp white Calacatta marble slab details line the floors, complemented by brushed-brass trim work, tailored Italian structural elements, and grand views.",
           gallery: [
             {
