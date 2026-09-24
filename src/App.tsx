@@ -161,7 +161,7 @@ ${contactForm.message || "Aucun message supplémentaire."}`;
   const t = translations[lang];
 
   // Logic to separate project matching
-  const isProjectPage = ['/france', '/suisse', '/usa', '/dubai', '/egypt'].includes(currentPath);
+  const isProjectPage = ['/dubai', '/suisse', '/usa', '/france', '/egypt'].includes(currentPath);
   const activeProjectId = isProjectPage ? currentPath.replace('/', '') : null;
   const activeProject = activeProjectId ? t.projects.items[activeProjectId] : null;
 
@@ -635,18 +635,18 @@ ${contactForm.message || "Aucun message supplémentaire."}`;
                 {/* 5 Countries Portfolio Grid (Bento style dynamic scale) */}
                 <div id="countries-grid" className="grid grid-cols-1 md:grid-cols-6 gap-6">
                   
-                  {/* CARD 1: FRANCE (Col span 3) */}
+                  {/* CARD 1: DUBAI (Col span 3) */}
                   <motion.div 
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.8 }}
                     className="md:col-span-3 group relative h-96 bg-brand-charcoal overflow-hidden rounded-sm cursor-pointer shadow-lg"
-                    onClick={() => navigateTo('/france')}
+                    onClick={() => navigateTo('/dubai')}
                   >
                     <img 
-                      src={t.projects.items.france.bannerImage} 
-                      alt="France Project" 
+                      src={t.projects.items.dubai.bannerImage} 
+                      alt="Dubai Project" 
                       className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                       style={{ filter: 'brightness(0.70)' }}
                       referrerPolicy="no-referrer"
@@ -657,16 +657,16 @@ ${contactForm.message || "Aucun message supplémentaire."}`;
                     <div className="absolute inset-0 p-8 flex flex-col justify-between text-white">
                       <div className="flex justify-between items-center">
                         <span className="text-[10px] font-mono tracking-[0.3em] uppercase bg-white/10 backdrop-blur-md py-1 px-3 border border-white/20">
-                          {t.projects.items.france.country}
+                          {t.projects.items.dubai.country}
                         </span>
                         <ArrowUpRight className="w-5 h-5 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-2 group-hover:translate-x-0" />
                       </div>
                       <div className="text-left">
                         <h4 className="font-serif text-2xl md:text-3xl font-light mb-2 tracking-wide text-brand-sand">
-                          {t.projects.items.france.title}
+                          {t.projects.items.dubai.title}
                         </h4>
                         <p className="text-xs text-brand-sand/80 font-light mb-4 line-clamp-2 max-w-md">
-                          {t.projects.items.france.introduction}
+                          {t.projects.items.dubai.introduction}
                         </p>
                         <button className="text-[11px] font-mono tracking-widest text-brand-bronze uppercase block font-semibold group-hover:text-white transition-colors">
                           — {t.projects.moreInfoButton}
@@ -750,18 +750,18 @@ ${contactForm.message || "Aucun message supplémentaire."}`;
                     </div>
                   </motion.div>
 
-                  {/* CARD 4: DUBAI (Col span 2) */}
+                  {/* CARD 4: FRANCE (Col span 2) */}
                   <motion.div 
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.8, delay: 0.1 }}
                     className="md:col-span-2 group relative h-80 bg-brand-charcoal overflow-hidden rounded-sm cursor-pointer shadow-lg"
-                    onClick={() => navigateTo('/dubai')}
+                    onClick={() => navigateTo('/france')}
                   >
                     <img 
-                      src={t.projects.items.dubai.bannerImage} 
-                      alt="Dubai Project" 
+                      src={t.projects.items.france.bannerImage} 
+                      alt="France Project" 
                       className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                       style={{ filter: 'brightness(0.70)' }}
                       referrerPolicy="no-referrer"
@@ -771,13 +771,13 @@ ${contactForm.message || "Aucun message supplémentaire."}`;
                     <div className="absolute inset-0 p-6 flex flex-col justify-between text-white">
                       <div className="flex justify-between items-center">
                         <span className="text-[10px] font-mono tracking-[0.3em] uppercase bg-white/10 backdrop-blur-md py-1 px-3 border border-white/20">
-                          {t.projects.items.dubai.country}
+                          {t.projects.items.france.country}
                         </span>
                         <ArrowUpRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-all duration-300" />
                       </div>
                       <div className="text-left">
                         <h4 className="font-serif text-xl font-light mb-1 text-brand-sand">
-                          {t.projects.items.dubai.title}
+                          {t.projects.items.france.title}
                         </h4>
                         <button className="text-[10px] font-mono tracking-widest text-brand-bronze uppercase block font-semibold mt-2">
                           {t.projects.moreInfoButton} →
