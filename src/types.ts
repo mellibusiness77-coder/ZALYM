@@ -40,6 +40,8 @@ export interface ProjectItem {
   countryCode: string;
   title: string;
   location: string;
+  duration?: string;
+  style?: string;
   bannerImage: string;
   introduction: string;
   gallery: {

@@ -2,7 +2,6 @@ import { TranslationSet } from './types';
 import heroImg from './assets/images/hero_interior_1782061008342.jpg';
 import portraitImg from './assets/images/designer_portrait_1782061023066.jpg';
 import serviceDesignImg from './assets/images/service_design_1782061037290.jpg';
-import serviceCoordinationImg from './assets/images/service_coordination_1782061051289.jpg';
 import serviceAuditImg from './assets/images/service_audit_1782061066262.jpg';
 import heroBrightImg from './assets/images/hero_bright_living_room_1782062589328.jpg';
 
@@ -11,7 +10,7 @@ export const IMAGES = {
   hero: 'https://image.noelshack.com/fichiers/2026/39/3/1790179967-accueuil-zaly.jpg',
   portrait: 'https://image.noelshack.com/fichiers/2026/26/1/1782084312-chatgpt-image-22-juin-2026-01-16-01.jpg',
   serviceDesign: serviceDesignImg,
-  serviceCoordination: serviceCoordinationImg,
+  serviceCoordination: 'https://image.noelshack.com/fichiers/2026/39/4/1790258524-collab.jpg',
   serviceAudit: serviceAuditImg,
   heroBright: 'https://image.noelshack.com/fichiers/2026/39/3/1790179967-accueuil-zaly.jpg'
 };
@@ -174,22 +173,88 @@ export const translations: { FR: TranslationSet; EN: TranslationSet } = {
           id: "dubai",
           country: "Dubai",
           countryCode: "AE",
-          title: "Villa d'Exception Oasis Céleste",
-          location: "Palm Jumeirah • Dubaï",
+          title: "Villa Arabian Ranches",
+          location: "Arabian Ranches, Dubaï",
+          duration: "3 semaines",
+          style: "mid century modern",
           bannerImage: "https://image.noelshack.com/fichiers/2026/39/3/1790184932-villa-zaly.jpg",
-          introduction: "Une villa côtière monumentale conçue pour créer l'harmonie parfaite entre la vue sur le golfe Persique et l'intimité du foyer. Les marbres nobles se déclinent en teintes désertiques dorées, rehaussés par un mobilier italien exclusif et des menuiseries sur mesure atteignant les plafonds.",
+          introduction: "Située à Arabian Ranches à Dubaï, cette villa de 220 m² a été entièrement aménagée et décorée pour un jeune couple et ses deux enfants.\n\nLe projet s’inspire du style Mid-Century Modern : lignes épurées, bois chaleureux, formes douces et palette de tons naturels. Chaque espace a été pensé pour offrir à la famille une maison élégante, confortable et facile à vivre au quotidien.",
           gallery: [
             {
-              url: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80",
-              caption: "Le somptueux atrium central : l'intégration d'un jardin sec minimaliste et d'un escalier hélicoïdal suspendu."
+              url: "https://image.noelshack.com/fichiers/2026/39/4/1790259241-photo-2026-09-23-17-33-28-1.jpg",
+              caption: "Chambre parentale : harmonie des volumes et lumière naturelle."
             },
             {
-              url: "https://images.unsplash.com/photo-1512915922686-57c11dde9b6b?auto=format&fit=crop&w=1200&q=80",
-              caption: "Salon d'été s'ouvrant sur la terrasse et sa piscine à débordement par de gigantesques vantaux invisibles."
+              url: "https://image.noelshack.com/fichiers/2026/39/4/1790259241-photo-2026-09-23-17-33-28-2.jpg",
+              caption: "Salon et ambiance Mid-Century Modern aux finitions soignées."
             },
             {
-              url: "https://images.unsplash.com/photo-1617806118233-18e1db207f62?auto=format&fit=crop&w=1200&q=80",
-              caption: "Détail de la salle de bains d'invités combinant un bloc vasque sculpté en Onyx rétro-éclairé."
+              url: "https://image.noelshack.com/fichiers/2026/39/4/1790259241-photo-2026-09-23-17-33-28-3.jpg",
+              caption: "Détail du mobilier aux lignes douces et textures chaleureuses."
+            },
+            {
+              url: "https://image.noelshack.com/fichiers/2026/39/4/1790259242-photo-2026-09-23-17-33-28-4.jpg",
+              caption: "Espace contemporain et circulation fluide."
+            },
+            {
+              url: "https://image.noelshack.com/fichiers/2026/39/4/1790259242-photo-2026-09-23-17-33-28-5.jpg",
+              caption: "Perspective architecturale mettant en valeur la palette de tons naturels."
+            },
+            {
+              url: "https://image.noelshack.com/fichiers/2026/39/4/1790259241-photo-2026-09-23-17-33-28-6.jpg",
+              caption: "Agencement sur mesure et intégration du bois chaleureux."
+            },
+            {
+              url: "https://image.noelshack.com/fichiers/2026/39/4/1790259242-photo-2026-09-23-17-33-29.jpg",
+              caption: "Harmonie des teintes douces et du design intemporel."
+            },
+            {
+              url: "https://image.noelshack.com/fichiers/2026/39/4/1790259243-photo-2026-09-23-17-33-29-1.jpg",
+              caption: "Entrée pensée pour la vie quotidienne en famille."
+            },
+            {
+              url: "https://image.noelshack.com/fichiers/2026/39/4/1790259243-photo-2026-09-23-17-33-29-2.jpg",
+              caption: "Détails décoratifs et sélection d'objets d'art délicats."
+            },
+            {
+              url: "https://image.noelshack.com/fichiers/2026/39/4/1790259242-photo-2026-09-23-17-33-29-3.jpg",
+              caption: "Aménagement sur mesure pour un coin bureau."
+            },
+            {
+              url: "https://image.noelshack.com/fichiers/2026/39/4/1790259243-photo-2026-09-23-17-33-29-4.jpg",
+              caption: "Côté salle à manger conçue comme un havre de paix."
+            },
+            {
+              url: "https://image.noelshack.com/fichiers/2026/39/4/1790259244-photo-2026-09-23-17-33-29-5.jpg",
+              caption: "Éclairage chaleureux et matières douces dans l'espace buanderie."
+            },
+            {
+              url: "https://image.noelshack.com/fichiers/2026/39/4/1790259243-photo-2026-09-23-17-33-29-6.jpg",
+              caption: "Chambre d'enfant alliant confort, clarté et rangements astucieux."
+            },
+            {
+              url: "https://image.noelshack.com/fichiers/2026/39/4/1790259244-photo-2026-09-23-17-33-29-7.jpg",
+              caption: "Deuxième chambre aux teintes apaisantes et agencement optimisé."
+            },
+            {
+              url: "https://image.noelshack.com/fichiers/2026/39/4/1790259244-photo-2026-09-23-17-33-29-8.jpg",
+              caption: "Chambre enfant girly."
+            },
+            {
+              url: "https://image.noelshack.com/fichiers/2026/39/4/1790259244-photo-2026-09-23-17-33-29-9.jpg",
+              caption: "Chambre enfant girly."
+            },
+            {
+              url: "https://image.noelshack.com/fichiers/2026/39/4/1790259245-photo-2026-09-23-17-33-29-10.jpg",
+              caption: "Chambre enfant girly."
+            },
+            {
+              url: "https://image.noelshack.com/fichiers/2026/39/4/1790259244-photo-2026-09-23-17-33-29-11.jpg",
+              caption: "Continuité entre les espaces intérieurs et l'extérieur."
+            },
+            {
+              url: "https://image.noelshack.com/fichiers/2026/39/4/1790259244-photo-2026-09-23-17-33-29-12.jpg",
+              caption: "Chambre d'ami épurée."
             }
           ]
         },
@@ -400,22 +465,88 @@ export const translations: { FR: TranslationSet; EN: TranslationSet } = {
           id: "dubai",
           country: "Dubai",
           countryCode: "AE",
-          title: "Celestial Palm Oasis Villa",
-          location: "Palm Jumeirah • Dubai",
+          title: "Villa Arabian Ranches",
+          location: "Arabian Ranches, Dubai",
+          duration: "3 weeks",
+          style: "Mid-Century Modern",
           bannerImage: "https://image.noelshack.com/fichiers/2026/39/3/1790184932-villa-zaly.jpg",
-          introduction: "A majestic coastal mansion celebrating indoor-outdoor waterfront interactions. Crisp white Calacatta marble slab details line the floors, complemented by brushed-brass trim work, tailored Italian structural elements, and grand views.",
+          introduction: "Located in Arabian Ranches in Dubai, this 220 m² villa was entirely designed and decorated for a young couple and their two children.\n\nThe project draws inspiration from the Mid-Century Modern style: clean lines, warm woods, soft shapes, and a palette of natural tones. Every space was curated to offer the family an elegant, comfortable, and effortless home for everyday living.",
           gallery: [
             {
-              url: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80",
-              caption: "Grand central double-atrium highlighted by custom water elements and a fluid helix marble stair flight."
+              url: "https://image.noelshack.com/fichiers/2026/39/4/1790259241-photo-2026-09-23-17-33-28-1.jpg",
+              caption: "Master bedroom: harmonious volumes and abundance of daylight."
             },
             {
-              url: "https://images.unsplash.com/photo-1512915922686-57c11dde9b6b?auto=format&fit=crop&w=1200&q=80",
-              caption: "Sunlit outdoor pavilion linking the family room to the glass-walled infinity pool edge."
+              url: "https://image.noelshack.com/fichiers/2026/39/4/1790259241-photo-2026-09-23-17-33-28-2.jpg",
+              caption: "Living room showcasing Mid-Century Modern ambiance and bespoke detailing."
             },
             {
-              url: "https://images.unsplash.com/photo-1617806118233-18e1db207f62?auto=format&fit=crop&w=1200&q=80",
-              caption: "Guest bathroom luxury with a hand-sculpted glowing translucent Onyx raw-edge wash stand."
+              url: "https://image.noelshack.com/fichiers/2026/39/4/1790259241-photo-2026-09-23-17-33-28-3.jpg",
+              caption: "Furniture detailing in soft curves and warm natural textures."
+            },
+            {
+              url: "https://image.noelshack.com/fichiers/2026/39/4/1790259242-photo-2026-09-23-17-33-28-4.jpg",
+              caption: "Contemporary space and fluid circulation paths."
+            },
+            {
+              url: "https://image.noelshack.com/fichiers/2026/39/4/1790259242-photo-2026-09-23-17-33-28-5.jpg",
+              caption: "Architectural perspective highlighting the serene earth-toned palette."
+            },
+            {
+              url: "https://image.noelshack.com/fichiers/2026/39/4/1790259241-photo-2026-09-23-17-33-28-6.jpg",
+              caption: "Custom joinery integrating warm timber veneers."
+            },
+            {
+              url: "https://image.noelshack.com/fichiers/2026/39/4/1790259242-photo-2026-09-23-17-33-29.jpg",
+              caption: "Subtle synergy between soothing hues and timeless design."
+            },
+            {
+              url: "https://image.noelshack.com/fichiers/2026/39/4/1790259243-photo-2026-09-23-17-33-29-1.jpg",
+              caption: "Entrance designed for everyday warmth and family living."
+            },
+            {
+              url: "https://image.noelshack.com/fichiers/2026/39/4/1790259243-photo-2026-09-23-17-33-29-2.jpg",
+              caption: "Curated styling accents and refined art objects."
+            },
+            {
+              url: "https://image.noelshack.com/fichiers/2026/39/4/1790259242-photo-2026-09-23-17-33-29-3.jpg",
+              caption: "Bespoke joinery for a dedicated home office area."
+            },
+            {
+              url: "https://image.noelshack.com/fichiers/2026/39/4/1790259243-photo-2026-09-23-17-33-29-4.jpg",
+              caption: "Dining area designed as a haven of peace."
+            },
+            {
+              url: "https://image.noelshack.com/fichiers/2026/39/4/1790259244-photo-2026-09-23-17-33-29-5.jpg",
+              caption: "Warm ambient lighting and soft textures in the laundry room."
+            },
+            {
+              url: "https://image.noelshack.com/fichiers/2026/39/4/1790259243-photo-2026-09-23-17-33-29-6.jpg",
+              caption: "Children's room pairing functionality with joyful playfulness."
+            },
+            {
+              url: "https://image.noelshack.com/fichiers/2026/39/4/1790259244-photo-2026-09-23-17-33-29-7.jpg",
+              caption: "Secondary bedroom featuring soothing neutral colors and built-in units."
+            },
+            {
+              url: "https://image.noelshack.com/fichiers/2026/39/4/1790259244-photo-2026-09-23-17-33-29-8.jpg",
+              caption: "Girly children's bedroom."
+            },
+            {
+              url: "https://image.noelshack.com/fichiers/2026/39/4/1790259244-photo-2026-09-23-17-33-29-9.jpg",
+              caption: "Girly children's bedroom."
+            },
+            {
+              url: "https://image.noelshack.com/fichiers/2026/39/4/1790259245-photo-2026-09-23-17-33-29-10.jpg",
+              caption: "Girly children's bedroom."
+            },
+            {
+              url: "https://image.noelshack.com/fichiers/2026/39/4/1790259244-photo-2026-09-23-17-33-29-11.jpg",
+              caption: "Seamless flow connecting indoor comfort to the terrace."
+            },
+            {
+              url: "https://image.noelshack.com/fichiers/2026/39/4/1790259244-photo-2026-09-23-17-33-29-12.jpg",
+              caption: "Minimalist guest bedroom."
             }
           ]
         },

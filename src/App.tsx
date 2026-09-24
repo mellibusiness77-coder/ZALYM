@@ -1063,7 +1063,7 @@ ${contactForm.message || "Aucun message supplémentaire."}`;
                     {t.projects.projectDetailsLabel}
                   </h3>
                   <div className="w-12 h-[1px] bg-brand-bronze mb-6" />
-                  <p className="font-serif text-xl sm:text-2xl font-light leading-relaxed text-brand-charcoal/90">
+                  <p className="font-serif text-xl sm:text-2xl font-light leading-relaxed text-brand-charcoal/90 whitespace-pre-line">
                     {activeProject.introduction}
                   </p>
                 </div>
@@ -1083,12 +1083,16 @@ ${contactForm.message || "Aucun message supplémentaire."}`;
                       <span className="text-brand-charcoal font-medium">{activeProject.location}</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-brand-taupe font-light">Durée du projet</span>
-                      <span className="text-brand-charcoal font-medium">6 — 12 Mois</span>
+                      <span className="text-brand-taupe font-light">{lang === 'FR' ? 'Durée du projet' : 'Project Duration'}</span>
+                      <span className="text-brand-charcoal font-medium">
+                        {activeProject.duration || (lang === 'FR' ? '6 — 12 Mois' : '6 — 12 Months')}
+                      </span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-brand-taupe font-light">Style principal</span>
-                      <span className="text-brand-charcoal font-medium">{lang === 'FR' ? 'Luxe discret & Naturel' : 'Quiet Luxury & Warm Minimal'}</span>
+                      <span className="text-brand-taupe font-light">Style</span>
+                      <span className="text-brand-charcoal font-medium">
+                        {activeProject.style || (lang === 'FR' ? 'Luxe discret & Naturel' : 'Quiet Luxury & Warm Minimal')}
+                      </span>
                     </div>
                   </div>
 
