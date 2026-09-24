@@ -23,7 +23,6 @@ import {
   Phone,
   Mail,
   Users,
-  MapPin,
   Clock,
   Briefcase
 } from 'lucide-react';
@@ -138,7 +137,7 @@ export default function App() {
 ${contactForm.message || "Aucun message supplémentaire."}`;
 
     // Universal WhatsApp Link
-    const waUrl = `https://wa.me/33660986173?text=${encodeURIComponent(messageTemplate)}`;
+    const waUrl = `https://wa.me/33667689053?text=${encodeURIComponent(messageTemplate)}`;
     
     // Open in separate window to ensure standard iframe compliance
     window.open(waUrl, '_blank');
@@ -842,22 +841,14 @@ ${contactForm.message || "Aucun message supplémentaire."}`;
                         {t.contact.subtitle}
                       </p>
 
-                      {/* Direct Address Coordinates */}
+                      {/* Direct Coordinates */}
                       <div id="contact-credentials" className="space-y-6 pt-6 border-t border-brand-taupe/20">
-                        <div className="flex items-start space-x-4">
-                          <MapPin className="w-5 h-5 text-brand-bronze shrink-0 mt-0.5" />
-                          <div>
-                            <p className="text-xs uppercase font-mono tracking-widest text-brand-charcoal font-semibold">ADRESSE DU STUDIO</p>
-                            <p className="text-sm text-brand-taupe font-light mt-1">Rue du Faubourg Saint-Honoré, 75008 Paris, France</p>
-                          </div>
-                        </div>
-
                         <div className="flex items-start space-x-4">
                           <Phone className="w-5 h-5 text-brand-bronze shrink-0 mt-0.5" />
                           <div>
-                            <p className="text-xs uppercase font-mono tracking-widest text-brand-charcoal font-semibold">CONVERSATION DIRECTE</p>
+                            <p className="text-xs uppercase font-mono tracking-widest text-brand-charcoal font-semibold">WHATSAPP</p>
                             <p className="text-sm text-brand-taupe font-mono mt-1 hover:text-brand-bronze transition-colors">
-                              <a href="https://wa.me/33660986173" target="_blank" rel="noopener noreferrer">+33 6 60 98 61 73</a>
+                              <a href="https://wa.me/33667689053" target="_blank" rel="noopener noreferrer">06 67 68 90 53</a>
                             </p>
                           </div>
                         </div>
@@ -865,7 +856,7 @@ ${contactForm.message || "Aucun message supplémentaire."}`;
                         <div className="flex items-start space-x-4">
                           <Mail className="w-5 h-5 text-brand-bronze shrink-0 mt-0.5" />
                           <div>
-                            <p className="text-xs uppercase font-mono tracking-widest text-brand-charcoal font-semibold">EMAIL GÉRAL</p>
+                            <p className="text-xs uppercase font-mono tracking-widest text-brand-charcoal font-semibold">EMAIL</p>
                             <p className="text-sm text-brand-taupe font-mono mt-1 hover:text-brand-bronze transition-colors">
                               <a href="mailto:contact@zalydesign.com">contact@zalydesign.com</a>
                             </p>
@@ -1179,7 +1170,7 @@ ${contactForm.message || "Aucun message supplémentaire."}`;
                 ZALY M
               </span>
               <p className="text-xs tracking-[0.3em] font-mono text-brand-bronze uppercase mt-1">
-                STUDIO D'INTERIEUR HAUT DE GAMME
+                ARCHITECTURE & DESIGN
               </p>
               
               <p className="text-sm text-brand-charcoal/80 font-normal mt-8 max-w-sm leading-relaxed font-sans">
@@ -1207,7 +1198,7 @@ ${contactForm.message || "Aucun message supplémentaire."}`;
                   <Linkedin className="w-4 h-4" />
                 </a>
                 <a 
-                  href="https://wa.me/33660986173" 
+                  href="https://wa.me/33667689053" 
                   aria-label="WhatsApp Zaly M Design" 
                   target="_blank" 
                   rel="noopener noreferrer" 
@@ -1255,18 +1246,6 @@ ${contactForm.message || "Aucun message supplémentaire."}`;
               <p className="text-xs text-brand-charcoal/80 leading-relaxed font-sans mb-6">
                 {t.footer.hoursVal}
               </p>
-
-              <div className="pt-4 border-t border-brand-charcoal/10">
-                <p className="text-[10px] text-brand-taupe uppercase font-mono tracking-widest font-semibold mb-2">HOTLINE WHATSAPP</p>
-                <a 
-                  href="https://wa.me/33660986173" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="font-mono text-sm text-brand-charcoal hover:text-brand-bronze transition-colors font-medium"
-                >
-                  +33 6 60 98 61 73
-                </a>
-              </div>
             </div>
 
           </div>
