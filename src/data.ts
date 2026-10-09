@@ -285,7 +285,7 @@ export const translations: { FR: TranslationSet; EN: TranslationSet } = {
     },
     contact: {
       title: "Parlons de votre projet",
-      subtitle: "Basés à Paris et intervenant à l'international, nous répondons à vos projets de beaux volumes sous 48h.",
+      subtitle: "Basés à Paris et intervenant à l'international, nous répondons à vos projets sous 48h.",
       fullName: "Nom complet",
       phone: "Numéro de téléphone",
       email: "Adresse e-mail",

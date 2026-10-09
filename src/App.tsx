@@ -1229,7 +1229,7 @@ ${contactForm.message || "Aucun message supplémentaire."}`;
                 </li>
                 <li className="flex items-center space-x-2">
                   <span className="w-1.5 h-1.5 bg-brand-bronze rounded-full" />
-                  <span>Dubaï — Résidences d'exceptions</span>
+                  <span>Dubaï — Villa Arabian Ranches</span>
                 </li>
                 <li className="flex items-center space-x-2">
                   <span className="w-1.5 h-1.5 bg-brand-bronze rounded-full" />
