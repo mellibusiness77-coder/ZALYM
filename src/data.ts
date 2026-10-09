@@ -2,7 +2,6 @@ import { TranslationSet } from './types';
 import heroImg from './assets/images/hero_interior_1782061008342.jpg';
 import portraitImg from './assets/images/designer_portrait_1782061023066.jpg';
 import serviceDesignImg from './assets/images/service_design_1782061037290.jpg';
-import serviceAuditImg from './assets/images/service_audit_1782061066262.jpg';
 import heroBrightImg from './assets/images/hero_bright_living_room_1782062589328.jpg';
 
 // Let's declare our generated image paths precisely as saved by generate_image
@@ -11,7 +10,7 @@ export const IMAGES = {
   portrait: 'https://image.noelshack.com/fichiers/2026/26/1/1782084312-chatgpt-image-22-juin-2026-01-16-01.jpg',
   serviceDesign: serviceDesignImg,
   serviceCoordination: 'https://image.noelshack.com/fichiers/2026/39/4/1790258524-collab.jpg',
-  serviceAudit: serviceAuditImg,
+  serviceAudit: 'https://image.noelshack.com/fichiers/2026/41/5/1791546237-photo-audit.jpg',
   heroBright: 'https://image.noelshack.com/fichiers/2026/39/3/1790179967-accueuil-zaly.jpg'
 };
 

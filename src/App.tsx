@@ -547,7 +547,7 @@ ${contactForm.message || "Aucun message supplémentaire."}`;
                             <img 
                               src={item.image} 
                               alt={item.title} 
-                              className="w-full h-full object-cover select-none transition-all duration-700 hover:scale-105"
+                              className="w-full h-full object-cover object-center select-none transition-all duration-700 hover:scale-105"
                               referrerPolicy="no-referrer"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-brand-charcoal/50 to-transparent pointer-events-none" />
