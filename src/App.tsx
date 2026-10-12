@@ -341,13 +341,13 @@ ${contactForm.message || "Aucun message supplémentaire."}`;
                 <span className="font-mono">Paris • Dubai</span>
               </div>
               <div className="flex space-x-6 text-brand-charcoal">
-                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-brand-bronze p-2 bg-brand-sand rounded-full">
+                <a href="https://www.instagram.com/decowithzaly/" target="_blank" rel="noopener noreferrer" className="hover:text-brand-bronze p-2 bg-brand-sand rounded-full">
                   <Instagram className="w-5 h-5" />
                 </a>
                 <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-brand-bronze p-2 bg-brand-sand rounded-full">
                   <Linkedin className="w-5 h-5" />
                 </a>
-                <a href="https://wa.me/33660986173" target="_blank" rel="noopener noreferrer" className="hover:text-brand-bronze p-2 bg-brand-sand rounded-full">
+                <a href="https://wa.me/33667689053" target="_blank" rel="noopener noreferrer" className="hover:text-brand-bronze p-2 bg-brand-sand rounded-full">
                   <Phone className="w-5 h-5" />
                 </a>
               </div>
@@ -979,8 +979,8 @@ ${contactForm.message || "Aucun message supplémentaire."}`;
                                 <p className="font-semibold">✓ {lang === 'FR' ? 'Message envoyé' : 'Inquiry dispatched'}</p>
                                 <p className="mt-1">
                                   {lang === 'FR' 
-                                    ? 'Si votre application WhatsApp ne s\'est pas lancée, vous pouvez m\'écrire directement au +33 6 60 98 61 73.'
-                                    : 'If WhatsApp did not focus automatically, feel free to text directly via +33 6 60 98 61 73.'}
+                                    ? 'Si votre application WhatsApp ne s\'est pas lancée, vous pouvez m\'écrire directement au +33 6 67 68 90 53.'
+                                    : 'If WhatsApp did not focus automatically, feel free to text directly via +33 6 67 68 90 53.'}
                                 </p>
                               </motion.div>
                             )}
@@ -1180,7 +1180,7 @@ ${contactForm.message || "Aucun message supplémentaire."}`;
               {/* Social Media Links */}
               <div className="flex space-x-4 mt-8">
                 <a 
-                  href="https://instagram.com" 
+                  href="https://www.instagram.com/decowithzaly/" 
                   aria-label="Instagram Zaly M Design" 
                   target="_blank" 
                   rel="noopener noreferrer" 
