@@ -160,7 +160,7 @@ ${contactForm.message || "Aucun message supplémentaire."}`;
   const t = translations[lang];
 
   // Logic to separate project matching
-  const isProjectPage = ['/dubai', '/suisse', '/usa', '/france', '/egypt'].includes(currentPath);
+  const isProjectPage = ['/dubai', '/suisse', '/usa', '/france'].includes(currentPath);
   const activeProjectId = isProjectPage ? currentPath.replace('/', '') : null;
   const activeProject = activeProjectId ? t.projects.items[activeProjectId] : null;
 
@@ -631,16 +631,16 @@ ${contactForm.message || "Aucun message supplémentaire."}`;
                   </p>
                 </div>
 
-                {/* 5 Countries Portfolio Grid (Bento style dynamic scale) */}
-                <div id="countries-grid" className="grid grid-cols-1 md:grid-cols-6 gap-6">
+                {/* 4 Countries Portfolio Grid */}
+                <div id="countries-grid" className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   
-                  {/* CARD 1: DUBAI (Col span 3) */}
+                  {/* CARD 1: DUBAI */}
                   <motion.div 
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.8 }}
-                    className="md:col-span-3 group relative h-96 bg-brand-charcoal overflow-hidden rounded-sm cursor-pointer shadow-lg"
+                    className="group relative h-96 bg-brand-charcoal overflow-hidden rounded-sm cursor-pointer shadow-lg"
                     onClick={() => navigateTo('/dubai')}
                   >
                     <img 
@@ -674,13 +674,13 @@ ${contactForm.message || "Aucun message supplémentaire."}`;
                     </div>
                   </motion.div>
 
-                  {/* CARD 2: SUISSE (Col span 3) */}
+                  {/* CARD 2: SUISSE */}
                   <motion.div 
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.8, delay: 0.15 }}
-                    className="md:col-span-3 group relative h-96 bg-brand-charcoal overflow-hidden rounded-sm cursor-pointer shadow-lg"
+                    className="group relative h-96 bg-brand-charcoal overflow-hidden rounded-sm cursor-pointer shadow-lg"
                     onClick={() => navigateTo('/suisse')}
                   >
                     <img 
@@ -713,13 +713,13 @@ ${contactForm.message || "Aucun message supplémentaire."}`;
                     </div>
                   </motion.div>
 
-                  {/* CARD 3: USA (Col span 2) */}
+                  {/* CARD 3: USA */}
                   <motion.div 
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.8 }}
-                    className="md:col-span-2 group relative h-80 bg-brand-charcoal overflow-hidden rounded-sm cursor-pointer shadow-lg"
+                    className="group relative h-96 bg-brand-charcoal overflow-hidden rounded-sm cursor-pointer shadow-lg"
                     onClick={() => navigateTo('/usa')}
                   >
                     <img 
@@ -729,33 +729,36 @@ ${contactForm.message || "Aucun message supplémentaire."}`;
                       style={{ filter: 'brightness(0.70)' }}
                       referrerPolicy="no-referrer"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-brand-charcoal via-transparent to-transparent opacity-80" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-brand-charcoal via-brand-charcoal/20 to-transparent opacity-90" />
                     
-                    <div className="absolute inset-0 p-6 flex flex-col justify-between text-white">
+                    <div className="absolute inset-0 p-8 flex flex-col justify-between text-white">
                       <div className="flex justify-between items-center">
                         <span className="text-[10px] font-mono tracking-[0.3em] uppercase bg-white/10 backdrop-blur-md py-1 px-3 border border-white/20">
                           {t.projects.items.usa.country}
                         </span>
-                        <ArrowUpRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-all duration-300" />
+                        <ArrowUpRight className="w-5 h-5 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-2 group-hover:translate-x-0" />
                       </div>
                       <div className="text-left">
-                        <h4 className="font-serif text-xl font-light mb-1 text-brand-sand">
+                        <h4 className="font-serif text-2xl md:text-3xl font-light mb-2 tracking-wide text-brand-sand">
                           {t.projects.items.usa.title}
                         </h4>
-                        <button className="text-[10px] font-mono tracking-widest text-brand-bronze uppercase block font-semibold mt-2">
-                          {t.projects.moreInfoButton} →
+                        <p className="text-xs text-brand-sand/80 font-light mb-4 line-clamp-2 max-w-md">
+                          {t.projects.items.usa.introduction}
+                        </p>
+                        <button className="text-[11px] font-mono tracking-widest text-brand-bronze uppercase block font-semibold group-hover:text-white transition-colors">
+                          — {t.projects.moreInfoButton}
                         </button>
                       </div>
                     </div>
                   </motion.div>
 
-                  {/* CARD 4: FRANCE (Col span 2) */}
+                  {/* CARD 4: FRANCE */}
                   <motion.div 
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.8, delay: 0.1 }}
-                    className="md:col-span-2 group relative h-80 bg-brand-charcoal overflow-hidden rounded-sm cursor-pointer shadow-lg"
+                    className="group relative h-96 bg-brand-charcoal overflow-hidden rounded-sm cursor-pointer shadow-lg"
                     onClick={() => navigateTo('/france')}
                   >
                     <img 
@@ -765,57 +768,24 @@ ${contactForm.message || "Aucun message supplémentaire."}`;
                       style={{ filter: 'brightness(0.70)' }}
                       referrerPolicy="no-referrer"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-brand-charcoal via-transparent to-transparent opacity-80" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-brand-charcoal via-brand-charcoal/20 to-transparent opacity-90" />
                     
-                    <div className="absolute inset-0 p-6 flex flex-col justify-between text-white">
+                    <div className="absolute inset-0 p-8 flex flex-col justify-between text-white">
                       <div className="flex justify-between items-center">
                         <span className="text-[10px] font-mono tracking-[0.3em] uppercase bg-white/10 backdrop-blur-md py-1 px-3 border border-white/20">
                           {t.projects.items.france.country}
                         </span>
-                        <ArrowUpRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-all duration-300" />
+                        <ArrowUpRight className="w-5 h-5 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-2 group-hover:translate-x-0" />
                       </div>
                       <div className="text-left">
-                        <h4 className="font-serif text-xl font-light mb-1 text-brand-sand">
+                        <h4 className="font-serif text-2xl md:text-3xl font-light mb-2 tracking-wide text-brand-sand">
                           {t.projects.items.france.title}
                         </h4>
-                        <button className="text-[10px] font-mono tracking-widest text-brand-bronze uppercase block font-semibold mt-2">
-                          {t.projects.moreInfoButton} →
-                        </button>
-                      </div>
-                    </div>
-                  </motion.div>
-
-                  {/* CARD 5: EGYPT (Col span 2) */}
-                  <motion.div 
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.8, delay: 0.2 }}
-                    className="md:col-span-2 group relative h-80 bg-brand-charcoal overflow-hidden rounded-sm cursor-pointer shadow-lg"
-                    onClick={() => navigateTo('/egypt')}
-                  >
-                    <img 
-                      src={t.projects.items.egypt.bannerImage} 
-                      alt="Egypt Project" 
-                      className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
-                      style={{ filter: 'brightness(0.70)' }}
-                      referrerPolicy="no-referrer"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-brand-charcoal via-transparent to-transparent opacity-80" />
-                    
-                    <div className="absolute inset-0 p-6 flex flex-col justify-between text-white">
-                      <div className="flex justify-between items-center">
-                        <span className="text-[10px] font-mono tracking-[0.3em] uppercase bg-white/10 backdrop-blur-md py-1 px-3 border border-white/20">
-                          {t.projects.items.egypt.country}
-                        </span>
-                        <ArrowUpRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-all duration-300" />
-                      </div>
-                      <div className="text-left">
-                        <h4 className="font-serif text-xl font-light mb-1 text-brand-sand">
-                          {t.projects.items.egypt.title}
-                        </h4>
-                        <button className="text-[10px] font-mono tracking-widest text-brand-bronze uppercase block font-semibold mt-2">
-                          {t.projects.moreInfoButton} →
+                        <p className="text-xs text-brand-sand/80 font-light mb-4 line-clamp-2 max-w-md">
+                          {t.projects.items.france.introduction}
+                        </p>
+                        <button className="text-[11px] font-mono tracking-widest text-brand-bronze uppercase block font-semibold group-hover:text-white transition-colors">
+                          — {t.projects.moreInfoButton}
                         </button>
                       </div>
                     </div>
@@ -997,7 +967,7 @@ ${contactForm.message || "Aucun message supplémentaire."}`;
             </motion.div>
           )}
 
-          {/* PATHS: '/france', '/suisse', '/usa', '/dubai', '/egypt' (DEDICATED COUNTRIES PAGES) */}
+          {/* PATHS: '/france', '/suisse', '/usa', '/dubai' (DEDICATED COUNTRIES PAGES) */}
           {isProjectPage && activeProject && (
             <motion.div
               key={currentPath}
@@ -1230,10 +1200,6 @@ ${contactForm.message || "Aucun message supplémentaire."}`;
                 <li className="flex items-center space-x-2">
                   <span className="w-1.5 h-1.5 bg-brand-bronze rounded-full" />
                   <span>Dubaï — Villa Arabian Ranches</span>
-                </li>
-                <li className="flex items-center space-x-2">
-                  <span className="w-1.5 h-1.5 bg-brand-bronze rounded-full" />
-                  <span>Le Caire — Villas de bord de Nil</span>
                 </li>
               </ul>
             </div>

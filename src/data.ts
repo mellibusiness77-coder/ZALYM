@@ -256,29 +256,6 @@ export const translations: { FR: TranslationSet; EN: TranslationSet } = {
               caption: "Chambre d'ami épurée."
             }
           ]
-        },
-        egypt: {
-          id: "egypt",
-          country: "Egypt",
-          countryCode: "EG",
-          title: "Résidence de Charme en Haute-Égypte",
-          location: "Le Caire • Égypte",
-          bannerImage: "https://images.unsplash.com/photo-1616046229478-9901c5536a45?auto=format&fit=crop&w=1600&q=85",
-          introduction: "Pétrie d'histoire et de matières solaires, cette grande propriété urbaine combine des approches vernaculaires et le raffinement de la décoration européenne contemporaine. Nous avons utilisé des enduits à la chaux appliqués manuellement, du travertin couleur sable et du lin brut d'Égypte.",
-          gallery: [
-            {
-              url: "https://images.unsplash.com/photo-1615529182906-134d9a3983a4?auto=format&fit=crop&w=1200&q=80",
-              caption: "Chambre à coucher épurée jouant avec des textures sablées claires et un mobilier en cèdre naturel."
-            },
-            {
-              url: "https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?auto=format&fit=crop&w=1200&q=80",
-              caption: "Espace lounge intime : niches architecturales voûtées d'inspiration saharienne et tapis berbères soyeux."
-            },
-            {
-              url: "https://images.unsplash.com/photo-1600585154526-990975239db0?auto=format&fit=crop&w=1200&q=80",
-              caption: "Salle de détente ouverte alliant un sol de marbre sablé, des canapés profonds beiges et des jeux d'ombres tamisées."
-            }
-          ]
         }
       }
     },
@@ -546,29 +523,6 @@ export const translations: { FR: TranslationSet; EN: TranslationSet } = {
             {
               url: "https://image.noelshack.com/fichiers/2026/39/4/1790259244-photo-2026-09-23-17-33-29-12.jpg",
               caption: "Minimalist guest bedroom."
-            }
-          ]
-        },
-        egypt: {
-          id: "egypt",
-          country: "Egypt",
-          countryCode: "EG",
-          title: "Luminous Giza Prestige Pavilion",
-          location: "Cairo • Egypt",
-          bannerImage: "https://images.unsplash.com/photo-1616046229478-9901c5536a45?auto=format&fit=crop&w=1600&q=85",
-          introduction: "Immerse in historic sunrays and dusty desert-toned surfaces. This grand urban property combines regional architecture lessons with polished European interior comforts. Standard sand-blasted earthy lime-plasters pair with brushed travertine stone blocks and local Egyptian raw linen draping.",
-          gallery: [
-            {
-              url: "https://images.unsplash.com/photo-1615529182906-134d9a3983a4?auto=format&fit=crop&w=1200&q=80",
-              caption: "Giza master bedroom featuring textured earth-colored walls and low-slung aromatic cedar sleep platforms."
-            },
-            {
-              url: "https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?auto=format&fit=crop&w=1200&q=80",
-              caption: "Intimate evening lounge room displaying saharic arched recesses and tactile flat-weave custom rugs."
-            },
-            {
-              url: "https://images.unsplash.com/photo-1600585154526-990975239db0?auto=format&fit=crop&w=1200&q=80",
-              caption: "Outdoor-facing relaxation deck lined with soft custom light beige cushions, filtering harsh sunrays."
             }
           ]
         }
