@@ -160,9 +160,9 @@ ${contactForm.message || "Aucun message supplémentaire."}`;
   const t = translations[lang];
 
   // Logic to separate project matching
-  const isProjectPage = ['/dubai', '/suisse', '/usa', '/france'].includes(currentPath);
-  const activeProjectId = isProjectPage ? currentPath.replace('/', '') : null;
-  const activeProject = activeProjectId ? t.projects.items[activeProjectId] : null;
+  const isProjectPage = ['/dubai', '/cotedivoire', '/cote-divoire', '/suisse', '/usa', '/france'].includes(currentPath);
+  const activeProjectId = isProjectPage ? (currentPath === '/cote-divoire' ? 'cotedivoire' : currentPath.replace('/', '')) : null;
+  const activeProject = activeProjectId ? (t.projects.items[activeProjectId] || (activeProjectId === 'suisse' ? t.projects.items.cotedivoire : null)) : null;
 
   return (
     <div id="zaly-app" className="min-h-screen flex flex-col selection:bg-brand-bronze selection:text-white bg-brand-cream text-brand-charcoal overflow-x-hidden antialiased font-sans">
@@ -674,18 +674,18 @@ ${contactForm.message || "Aucun message supplémentaire."}`;
                     </div>
                   </motion.div>
 
-                  {/* CARD 2: SUISSE */}
+                  {/* CARD 2: CÔTE D'IVOIRE */}
                   <motion.div 
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.8, delay: 0.15 }}
                     className="group relative h-96 bg-brand-charcoal overflow-hidden rounded-sm cursor-pointer shadow-lg"
-                    onClick={() => navigateTo('/suisse')}
+                    onClick={() => navigateTo('/cote-divoire')}
                   >
                     <img 
-                      src={t.projects.items.suisse.bannerImage} 
-                      alt="Suisse Project" 
+                      src={t.projects.items.cotedivoire.bannerImage} 
+                      alt="Côte d'Ivoire Project" 
                       className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                       style={{ filter: 'brightness(0.70)' }}
                       referrerPolicy="no-referrer"
@@ -695,16 +695,16 @@ ${contactForm.message || "Aucun message supplémentaire."}`;
                     <div className="absolute inset-0 p-8 flex flex-col justify-between text-white">
                       <div className="flex justify-between items-center">
                         <span className="text-[10px] font-mono tracking-[0.3em] uppercase bg-white/10 backdrop-blur-md py-1 px-3 border border-white/20">
-                          {t.projects.items.suisse.country}
+                          {t.projects.items.cotedivoire.country}
                         </span>
                         <ArrowUpRight className="w-5 h-5 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-2 group-hover:translate-x-0" />
                       </div>
                       <div className="text-left">
                         <h4 className="font-serif text-2xl md:text-3xl font-light mb-2 tracking-wide text-brand-sand">
-                          {t.projects.items.suisse.title}
+                          {t.projects.items.cotedivoire.title}
                         </h4>
                         <p className="text-xs text-brand-sand/80 font-light mb-4 line-clamp-2 max-w-md">
-                          {t.projects.items.suisse.introduction}
+                          {t.projects.items.cotedivoire.introduction}
                         </p>
                         <button className="text-[11px] font-mono tracking-widest text-brand-bronze uppercase block font-semibold group-hover:text-white transition-colors">
                           — {t.projects.moreInfoButton}
@@ -967,7 +967,7 @@ ${contactForm.message || "Aucun message supplémentaire."}`;
             </motion.div>
           )}
 
-          {/* PATHS: '/france', '/suisse', '/usa', '/dubai' (DEDICATED COUNTRIES PAGES) */}
+          {/* PATHS: '/france', '/cote-divoire', '/usa', '/dubai' (DEDICATED COUNTRIES PAGES) */}
           {isProjectPage && activeProject && (
             <motion.div
               key={currentPath}
@@ -1096,19 +1096,23 @@ ${contactForm.message || "Aucun message supplémentaire."}`;
                     <div className="aspect-[4/3] bg-brand-charcoal overflow-hidden rounded-sm relative group">
                       <img 
                         src={imgItem.url} 
-                        alt={imgItem.caption} 
+                        alt={imgItem.caption || activeProject.title} 
                         className="w-full h-full object-cover select-none transition-transform duration-700 group-hover:scale-103"
                         referrerPolicy="no-referrer"
                       />
-                      <div className="absolute inset-0 bg-brand-charcoal/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-6 text-white text-center text-xs backdrop-blur-xs font-serif italic">
-                        {imgItem.caption}
-                      </div>
+                      {imgItem.caption ? (
+                        <div className="absolute inset-0 bg-brand-charcoal/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-6 text-white text-center text-xs backdrop-blur-xs font-serif italic">
+                          {imgItem.caption}
+                        </div>
+                      ) : null}
                     </div>
                     
-                    <p className="text-xs text-brand-charcoal/80 font-mono tracking-wide mt-4 text-left leading-relaxed">
-                      <span className="text-brand-bronze font-semibold mr-2">{String(idx + 1).padStart(2, '0')} //</span>
-                      {imgItem.caption}
-                    </p>
+                    {imgItem.caption ? (
+                      <p className="text-xs text-brand-charcoal/80 font-mono tracking-wide mt-4 text-left leading-relaxed">
+                        <span className="text-brand-bronze font-semibold mr-2">{String(idx + 1).padStart(2, '0')} //</span>
+                        {imgItem.caption}
+                      </p>
+                    ) : null}
                   </motion.div>
                 ))}
               </div>
@@ -1191,11 +1195,11 @@ ${contactForm.message || "Aucun message supplémentaire."}`;
                 </li>
                 <li className="flex items-center space-x-2">
                   <span className="w-1.5 h-1.5 bg-brand-bronze rounded-full" />
-                  <span>Suisse — Chalets alpins</span>
+                  <span>Côte d'Ivoire — Cité Belle Nubian, Abidjan</span>
                 </li>
                 <li className="flex items-center space-x-2">
                   <span className="w-1.5 h-1.5 bg-brand-bronze rounded-full" />
-                  <span>New York — Lofts urbains</span>
+                  <span>USA — Pâtisserie salon de thé</span>
                 </li>
                 <li className="flex items-center space-x-2">
                   <span className="w-1.5 h-1.5 bg-brand-bronze rounded-full" />

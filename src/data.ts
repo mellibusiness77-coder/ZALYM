@@ -118,30 +118,52 @@ export const translations: { FR: TranslationSet; EN: TranslationSet } = {
             }
           ]
         },
-        suisse: {
-          id: "suisse",
-          country: "Suisse",
-          countryCode: "CH",
-          title: "Chalet Contemporain et Épuré",
-          location: "Crans-Montana • Suisse",
-          bannerImage: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=85",
-          introduction: "Un sanctuaire face aux sommets valaisans. L'approche a consisté à éliminer le superflu pour exalter la puissance brute du paysage montagnard. Le mélèze sablé et la pierre locale se marient aux canapés oversize et à un éclairage architectural discret pour un confort thermique et visuel d'exception.",
+        cotedivoire: {
+          id: "cotedivoire",
+          country: "Côte d'Ivoire",
+          countryCode: "CI",
+          title: "Conception 3D, Cité Belle Nubian Riviera Mbadon  ville Abijan. ",
+          location: "Abidjan • Côte d'Ivoire",
+          duration: "Conception 3D",
+          style: "Architecture Contemporaine & Design 3D",
+          bannerImage: "https://image.noelshack.com/fichiers/2026/42/3/1791972381-photo-2026-09-23-17-49-41-1.jpg",
+          introduction: "Conception 3D architecturale et aménagement d'intérieur pour une résidence d'exception située à la Cité Belle Nubian, Riviera Mbadon à Abidjan. Les espaces ont été pensés pour allier modernité, confort et élégance.",
           gallery: [
             {
-              url: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=80",
-              caption: "Le séjour cathédrale orienté vers les cimes, caractérisé par son harmonie de bois sombre et beige."
+              url: "https://image.noelshack.com/fichiers/2026/42/3/1791972574-photo-2026-09-23-17-49-40.jpg",
+              caption: ""
             },
             {
-              url: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80",
-              caption: "Salon de lecture intime, avec cheminée ouverte encastrée dans un mur de calcaire sculpté."
+              url: "https://image.noelshack.com/fichiers/2026/42/3/1791972574-photo-2026-09-23-17-49-40-1.jpg",
+              caption: ""
             },
             {
-              url: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=80",
-              caption: "Cuisine épurée avec îlot central en granite brossé suisse et poignées dérobées."
+              url: "https://image.noelshack.com/fichiers/2026/42/3/1791972574-photo-2026-09-23-17-49-40-2.jpg",
+              caption: ""
             },
             {
-              url: "https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=1200&q=80",
-              caption: "Lumière douce de fin de journée glissant sur les rideaux et les volumes en chêne clair."
+              url: "https://image.noelshack.com/fichiers/2026/42/3/1791972574-photo-2026-09-23-17-49-40-3.jpg",
+              caption: ""
+            },
+            {
+              url: "https://image.noelshack.com/fichiers/2026/42/3/1791972574-photo-2026-09-23-17-49-40-4.jpg",
+              caption: ""
+            },
+            {
+              url: "https://image.noelshack.com/fichiers/2026/42/3/1791972574-photo-2026-09-23-17-49-40-5.jpg",
+              caption: ""
+            },
+            {
+              url: "https://image.noelshack.com/fichiers/2026/42/3/1791972574-photo-2026-09-23-17-49-41.jpg",
+              caption: ""
+            },
+            {
+              url: "https://image.noelshack.com/fichiers/2026/42/3/1791972574-photo-2026-09-23-17-49-41-1.jpg",
+              caption: ""
+            },
+            {
+              url: "https://image.noelshack.com/fichiers/2026/42/3/1791972574-photo-2026-09-23-17-49-41-2.jpg",
+              caption: ""
             }
           ]
         },
@@ -149,22 +171,20 @@ export const translations: { FR: TranslationSet; EN: TranslationSet } = {
           id: "usa",
           country: "USA",
           countryCode: "US",
-          title: "Penthouse Minimaliste",
-          location: "SoHo, New York • USA",
-          bannerImage: "https://images.unsplash.com/photo-1541123437800-1bb1317badc2?auto=format&fit=crop&w=1600&q=85",
-          introduction: "Au sommet d'un bâtiment industriel réhabilité de SoHo, notre équipe a structuré un espace de vie grandiose baigné de lumière de part en part. Nous avons privilégié les contrastes : acier brossé d'une rigueur absolue contre rideaux aériens en lin double drapé, et sols en ciment soyeux.",
+          title: "Pâtisserie salon de thé",
+          location: "USA",
+          duration: "Conception & Réalisation",
+          style: "Pâtisserie & Salon de thé",
+          bannerImage: "https://image.noelshack.com/fichiers/2026/42/3/1791973218-photo-2026-09-25-08-09-57.jpg",
+          introduction: "Aménagement d'intérieur et création d'une identité architecturale raffinée pour un concept de pâtisserie et salon de thé aux États-Unis. Un dialogue élégant entre matières nobles, lumière feutrée et douceur des lignes pour une immersion gourmande unique.",
           gallery: [
             {
-              url: "https://images.unsplash.com/photo-1600121848594-d8644e57abad?auto=format&fit=crop&w=1200&q=80",
-              caption: "Espace ouvert salon-repas mettant en valeur de somptueuses pièces de mobilier d'art italien."
+              url: "https://image.noelshack.com/fichiers/2026/42/3/1791973486-photo-2026-09-25-08-09-43.jpg",
+              caption: ""
             },
             {
-              url: "https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&fit=crop&w=1200&q=80",
-              caption: "La cuisine d'architecte, monobloc d'inox microbillé s'intégrant discrètement au fond de la pièce."
-            },
-            {
-              url: "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=1200&q=80",
-              caption: "Suite présidentielle isolée par des cloisons acoustiques élégamment gainées de feutre de laine."
+              url: "https://image.noelshack.com/fichiers/2026/42/3/1791973486-photo-2026-09-25-08-09-57.jpg",
+              caption: ""
             }
           ]
         },
@@ -387,30 +407,52 @@ export const translations: { FR: TranslationSet; EN: TranslationSet } = {
             }
           ]
         },
-        suisse: {
-          id: "suisse",
-          country: "Switzerland",
-          countryCode: "CH",
-          title: "Contemporary Minimalist Alpine Chalet",
-          location: "Crans-Montana • Switzerland",
-          bannerImage: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=85",
-          introduction: "A pure scenic refuge high in the dramatic Crans-Montana. The layout eliminates any visual noise to isolate the stunning Alpine landscape. Salvaged mountain larch timber and natural grey stone tiles pair perfectly with oversized Italian linen seating and custom light architectural details.",
+        cotedivoire: {
+          id: "cotedivoire",
+          country: "Côte d'Ivoire",
+          countryCode: "CI",
+          title: "Conception 3D, Cité Belle Nubian Riviera Mbadon  ville Abijan. ",
+          location: "Abidjan • Ivory Coast",
+          duration: "3D Architectural Design",
+          style: "Contemporary Architecture & 3D Design",
+          bannerImage: "https://image.noelshack.com/fichiers/2026/42/3/1791972381-photo-2026-09-23-17-49-41-1.jpg",
+          introduction: "3D architectural visualization and bespoke high-end interior concept for an exceptional property located at Cité Belle Nubian, Riviera Mbadon in Abidjan.",
           gallery: [
             {
-              url: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=80",
-              caption: "Double-height central living room boasting pristine wall details and large structural logs."
+              url: "https://image.noelshack.com/fichiers/2026/42/3/1791972574-photo-2026-09-23-17-49-40.jpg",
+              caption: ""
             },
             {
-              url: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80",
-              caption: "Cosy reading snug wrapping around a low horizontal fireplace nested in bespoke limestone blocks."
+              url: "https://image.noelshack.com/fichiers/2026/42/3/1791972574-photo-2026-09-23-17-49-40-1.jpg",
+              caption: ""
             },
             {
-              url: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=80",
-              caption: "Sleek alpine kitchen containing a monolithic grey granite island and flush soft-close appliances."
+              url: "https://image.noelshack.com/fichiers/2026/42/3/1791972574-photo-2026-09-23-17-49-40-2.jpg",
+              caption: ""
             },
             {
-              url: "https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=1200&q=80",
-              caption: "Filtered evening sunshine falling upon tailored oak panels and custom textured wall coverings."
+              url: "https://image.noelshack.com/fichiers/2026/42/3/1791972574-photo-2026-09-23-17-49-40-3.jpg",
+              caption: ""
+            },
+            {
+              url: "https://image.noelshack.com/fichiers/2026/42/3/1791972574-photo-2026-09-23-17-49-40-4.jpg",
+              caption: ""
+            },
+            {
+              url: "https://image.noelshack.com/fichiers/2026/42/3/1791972574-photo-2026-09-23-17-49-40-5.jpg",
+              caption: ""
+            },
+            {
+              url: "https://image.noelshack.com/fichiers/2026/42/3/1791972574-photo-2026-09-23-17-49-41.jpg",
+              caption: ""
+            },
+            {
+              url: "https://image.noelshack.com/fichiers/2026/42/3/1791972574-photo-2026-09-23-17-49-41-1.jpg",
+              caption: ""
+            },
+            {
+              url: "https://image.noelshack.com/fichiers/2026/42/3/1791972574-photo-2026-09-23-17-49-41-2.jpg",
+              caption: ""
             }
           ]
         },
@@ -418,22 +460,20 @@ export const translations: { FR: TranslationSet; EN: TranslationSet } = {
           id: "usa",
           country: "USA",
           countryCode: "US",
-          title: "Loft-Penthouse Collection",
-          location: "SoHo, New York • USA",
-          bannerImage: "https://images.unsplash.com/photo-1541123437800-1bb1317badc2?auto=format&fit=crop&w=1600&q=85",
-          introduction: "Hovering high above historical SoHo brick architectures, this top-floor penthouse was engineered to feel light, open, and intensely tactile. Raw blackened structural steel, micro-cement floor coatings, and grand sliding panels establish an exquisite urban lifestyle.",
+          title: "Pâtisserie salon de thé",
+          location: "USA",
+          duration: "Design & Implementation",
+          style: "Patisserie & Tea Salon",
+          bannerImage: "https://image.noelshack.com/fichiers/2026/42/3/1791973218-photo-2026-09-25-08-09-57.jpg",
+          introduction: "Bespoke interior architecture and design for a high-end French patisserie and tea salon in the USA. A warm, refined, and contemporary atmosphere combining noble textures and curated lighting.",
           gallery: [
             {
-              url: "https://images.unsplash.com/photo-1600121848594-d8644e57abad?auto=format&fit=crop&w=1200&q=80",
-              caption: "Fluid lifestyle lounge containing unique limited-edition furniture creations and bespoke art curation."
+              url: "https://image.noelshack.com/fichiers/2026/42/3/1791973486-photo-2026-09-25-08-09-43.jpg",
+              caption: ""
             },
             {
-              url: "https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&fit=crop&w=1200&q=80",
-              caption: "Minimalist stainless-steel professional cooktop setup matching flush wood backboards seamlessly."
-            },
-            {
-              url: "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=1200&q=80",
-              caption: "Master penthouse bedroom isolated behind custom acoustic felt wall systems."
+              url: "https://image.noelshack.com/fichiers/2026/42/3/1791973486-photo-2026-09-25-08-09-57.jpg",
+              caption: ""
             }
           ]
         },
